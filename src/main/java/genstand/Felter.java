@@ -6,7 +6,8 @@ public class Felter {
 
     public static Felt[] getFelter() {
 
-        Felt[] felter = new Felt[24];
+        Felt[] felter = new Felt[40];
+
         felter[0] = new Felt();
         felter[0].setFeltNavn("Start");
         felter[0].setPris(-1);
@@ -168,6 +169,126 @@ public class Felter {
         felter[23].setBeskrivelse("< Brøndby Strand Strand):");
         felter[23].setFarve(Color.BLUE);
         felter[23].setPrisUdskrift("M5");
+
+        felter[24] = new Felt();
+        felter[24].setFeltNavn("Strandpromenaden");
+        felter[24].setPris(5);
+        felter[24].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[24].setFarve(Color.BLUE);
+        felter[24].setPrisUdskrift("M5");
+
+        felter[25] = new Felt();
+        felter[25].setFeltNavn("Strandpromenaden");
+        felter[25].setPris(5);
+        felter[25].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[25].setFarve(Color.BLUE);
+        felter[25].setPrisUdskrift("M5");
+
+        felter[26] = new Felt();
+        felter[26].setFeltNavn("Strandpromenaden");
+        felter[26].setPris(5);
+        felter[26].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[26].setFarve(Color.BLUE);
+        felter[26].setPrisUdskrift("M5");
+
+        felter[27] = new Felt();
+        felter[27].setFeltNavn("Strandpromenaden");
+        felter[27].setPris(5);
+        felter[27].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[27].setFarve(Color.BLUE);
+        felter[27].setPrisUdskrift("M5");
+
+        felter[28] = new Felt();
+        felter[28].setFeltNavn("Strandpromenaden");
+        felter[28].setPris(5);
+        felter[28].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[28].setFarve(Color.BLUE);
+        felter[28].setPrisUdskrift("M5");
+
+        felter[29] = new Felt();
+        felter[29].setFeltNavn("Strandpromenaden");
+        felter[29].setPris(5);
+        felter[29].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[29].setFarve(Color.BLUE);
+        felter[29].setPrisUdskrift("M5");
+
+        felter[30] = new Felt();
+        felter[30].setFeltNavn("Strandpromenaden");
+        felter[30].setPris(5);
+        felter[30].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[30].setFarve(Color.BLUE);
+        felter[30].setPrisUdskrift("M5");
+
+        felter[31] = new Felt();
+        felter[31].setFeltNavn("Strandpromenaden");
+        felter[31].setPris(5);
+        felter[31].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[31].setFarve(Color.BLUE);
+        felter[31].setPrisUdskrift("M5");
+
+        felter[32] = new Felt();
+        felter[32].setFeltNavn("Strandpromenaden");
+        felter[32].setPris(5);
+        felter[32].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[32].setFarve(Color.BLUE);
+        felter[32].setPrisUdskrift("M5");
+
+        felter[33] = new Felt();
+        felter[33].setFeltNavn("Strandpromenaden");
+        felter[33].setPris(5);
+        felter[33].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[33].setFarve(Color.BLUE);
+        felter[33].setPrisUdskrift("M5");
+
+        felter[34] = new Felt();
+        felter[34].setFeltNavn("Strandpromenaden");
+        felter[34].setPris(5);
+        felter[34].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[34].setFarve(Color.BLUE);
+        felter[34].setPrisUdskrift("M5");
+
+        felter[35] = new Felt();
+        felter[35].setFeltNavn("Strandpromenaden");
+        felter[35].setPris(5);
+        felter[35].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[35].setFarve(Color.BLUE);
+        felter[35].setPrisUdskrift("M5");
+
+        felter[36] = new Felt();
+        felter[36].setFeltNavn("Strandpromenaden");
+        felter[36].setPris(5);
+        felter[36].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[36].setFarve(Color.BLUE);
+        felter[36].setPrisUdskrift("M5");
+
+        felter[36] = new Felt();
+        felter[36].setFeltNavn("Strandpromenaden");
+        felter[36].setPris(5);
+        felter[36].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[36].setFarve(Color.BLUE);
+        felter[36].setPrisUdskrift("M5");
+
+        felter[37] = new Felt();
+        felter[37].setFeltNavn("Strandpromenaden");
+        felter[37].setPris(5);
+        felter[37].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[37].setFarve(Color.BLUE);
+        felter[37].setPrisUdskrift("M5");
+
+        felter[38] = new Felt();
+        felter[38].setFeltNavn("Strandpromenaden");
+        felter[38].setPris(5);
+        felter[38].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[38].setFarve(Color.BLUE);
+        felter[38].setPrisUdskrift("M5");
+
+        felter[39] = new Felt();
+        felter[39].setFeltNavn("Strandpromenaden");
+        felter[39].setPris(5);
+        felter[39].setBeskrivelse("< Brøndby Strand Strand):");
+        felter[39].setFarve(Color.BLUE);
+        felter[39].setPrisUdskrift("M5");
+
 
         return felter;
     }
