@@ -15,12 +15,16 @@ public class Kontrol {
     private Spilleplade plade;
     private Terning terning;
     private Spil spil;
+    private Terning terning2;
 
     //Constructor for Kontrol der laver objekter af en spilleplade samt en terning
     public Kontrol() {
         plade = new Spilleplade();
         terning = new Terning();
         terning.kast();
+        //Terning 2
+        terning2 = new Terning();
+        terning2.kast();
     }
 
     public void spilKontrol() {
@@ -31,8 +35,8 @@ public class Kontrol {
         int nuværendeSpillere = -1;
         do {
             nuværendeSpillere = (nuværendeSpillere + 1) % listeAfSpillere.antalAfSpiller();
-            plade.setTerning(terning.kast());
-            spil.spillerHandling(terning, listeAfSpillere.getSpiller(nuværendeSpillere));
+            plade.setTerning(terning.kast(), terning2.kast());
+            spil.spillerHandling(terning, terning2, listeAfSpillere.getSpiller(nuværendeSpillere));
 
         } while (!listeAfSpillere.getSpiller(nuværendeSpillere).getHarTabt());
 

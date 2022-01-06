@@ -25,13 +25,14 @@ public class Spil {
     }
 
     //Giver spiller en ny placering efter terningslag.
-    public void spillerHandling(Terning terning, Spiller spiller)
+    public void spillerHandling(Terning terning, Terning terning2, Spiller spiller)
     {
         int kast = terning.getØjne();
+        int kast2 = terning2.getØjne();
         String meddelelse = spiller.getNavn();
 
         int forrigePosition = spiller.getPosition();
-        int nyePosition = (forrigePosition + kast);
+        int nyePosition = (forrigePosition + kast + kast2);
 
         if (nyePosition >= plade.getFelter().length)
         {

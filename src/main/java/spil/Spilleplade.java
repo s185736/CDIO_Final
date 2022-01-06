@@ -86,9 +86,9 @@ public class Spilleplade {
         gui.showMessage(meddelelse);
     }
 
-    public void setTerning(int øjne)
+    public void setTerning(int øjne, int øjne2)
     {
-        gui.setDie(øjne);
+        gui.setDice(øjne, øjne2);
     }
 
     public String toString() {
