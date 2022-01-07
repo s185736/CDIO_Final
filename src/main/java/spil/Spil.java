@@ -2,6 +2,8 @@ package spil;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
+
 import genstand.Felt;
 import genstand.Felter;
 import genstand.Spiller;
@@ -116,6 +118,7 @@ public class Spil {
             spiller.setHarTabt(true);
 
             ArrayList<Integer> placeringer = new ArrayList<Integer>();
+            //HashMap<String, Integer> placeringer = new HashMap<>();
             for(int i = 0; i < spillere.antalAfSpiller(); i++) {
                 placeringer.add(spillere.getSpiller(i).getKonto().getSaldo());
             }
