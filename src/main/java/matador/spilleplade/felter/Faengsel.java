@@ -20,7 +20,7 @@ public class Faengsel extends Felt {
 
         this.erPaaBesoeg = erPaaBesoeg;
         String fieldType;
-        fieldType = erPaaBesoeg ? "besoeg" : "gaatil";
+        fieldType = erPaaBesoeg ? "besoeg" : "gaatil"; // fieldType for de to fængselsfelter
 
         this.setFeltNavn(Oversaetter.t("spilleplade.felt.faengsel." + fieldType + ".feltnavn"));
         this.setBeskrivelse(Oversaetter.t("spilleplade.felt.faengsel." + fieldType + ".beskrivelse"));
@@ -52,6 +52,8 @@ public class Faengsel extends Felt {
         return this.erPaaBesoeg;
     }
 
+
+    /*Hvis Spiller er i fængsel.*/
     @Override
     public void koerHandling(Spil spil) {
         if (this.erPaaBesoeg) {
@@ -59,14 +61,14 @@ public class Faengsel extends Felt {
         }
         Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
         switch (spiller.getFængselsKort()) {
-            case 0:
+            case 0: //Betal for at komme ud af fængsel
                 spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.action"));
                 spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
 
                 spiller.tilfoejBalance(-2);
                 spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.pay"));
                 break;
-            default:
+            default: //Brug slip ud af Fængsels kort
                 spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.action"));
                 spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
                 spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card"));
