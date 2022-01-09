@@ -59,7 +59,7 @@ public class Faengsel extends Felt {
         if (this.erPaaBesoeg) {
             return;
         }
-        Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
+      /*  Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
         switch (spiller.getFængselsKort()) {
             case 0: //Betal for at komme ud af fængsel
                 spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.action"));
@@ -76,6 +76,16 @@ public class Faengsel extends Felt {
                 spiller.fjernFaengselsKort(1);
                 spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card.num") + spiller.getFængselsKort() + Oversaetter.t("spilleplade.felt.faengsel.free.card.num2"));
                 break;
+        } */
+
+        Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
+            // switchcase for drop ned menu over muligheder for at komme ud af fængsel
+        switch (spiller.forladFaengsel()){
+
         }
+
+
+
+
     }
 }
