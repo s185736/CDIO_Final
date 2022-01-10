@@ -177,10 +177,8 @@ public class Spil {
                 this.gui.showMessage("Oops, der står vist lige imellen " + String.join(", ", vinderSpiller)+".");
             }
         }
-
         this.gui.showMessage("Woow, vi har en Matador Vinder: " + vinder[0].getNavn()+".");
     }
-
 
     /*Herunder starter spillets og spillerne oprettes og der skal bestemmes
     * hvem skal der skal starte spillet.*/
