@@ -58,22 +58,36 @@ public class Faengsel extends Felt {
             return;
         }
         Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
-        switch (spiller.getFængselsKort()) {
-            case 0:
-                spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.action"));
-                spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
+        String output = "";
+        String[] valg = {"Betal", "Fængselskort"};
+        String faengselMulighed = spil.getGui().getUserSelection("Hvordan vil du ud af faengsel?", valg);
 
-                spiller.tilfoejBalance(-2);
-                spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.pay"));
-                break;
-            default:
-                spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.action"));
-                spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
-                spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card"));
+        // if statement for drop ned menu over muligheder for at komme ud af fængsel
+        if ( faengselMulighed.equals("Betal") ) {
+            spiller.tilfoejBalance(-2);
+            spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.action"));
+            spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
+            spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.pay"));
 
-                spiller.fjernFaengselsKort(1);
-                spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card.num") + spiller.getFængselsKort() + Oversaetter.t("spilleplade.felt.faengsel.free.card.num2"));
-                break;
         }
+        if ( faengselMulighed.equals("Fængselskort") ) {
+            spiller.getFængselsKort();
+            spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.action"));
+            spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
+            spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card"));
+
+            spiller.fjernFaengselsKort(1);
+            spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card.num") + spiller.getFængselsKort() + Oversaetter.t("spilleplade.felt.faengsel.free.card.num2"));
+        }
+           /* if ( faengselMulighed.equals("Terningekast") ) {
+                    if (faceValue1 == faceValue2) {
+                        erPaaBesoeg = true;
+                        spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
+                    }
+                    else if (faceValue1 != faceValue2){
+
+                    }
+
+                } */
     }
 }
