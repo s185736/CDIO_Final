@@ -80,14 +80,15 @@ public class Faengsel extends Felt {
 
         Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
         String faengselMulighed = "";
+        faengselMulighed = spil.getGui().getUserSelection("Hvordan vil du ud af faengsel?", "Betal", "Fængselskort");
             // switchcase for drop ned menu over muligheder for at komme ud af fængsel
         switch (spiller.forladFaengsel){
-            case 1: faengselMulighed = spil.getGui().getUserSelection("Betal");
+            case 1: faengselMulighed = "Betal";
                     spiller.tilfoejBalance(-2);
                     spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
 
                 break;
-            case 2: faengselMulighed = spil.getGui().getUserSelection("Fængselskort");
+            case 2: faengselMulighed = "Fængselskort";
                     spiller.getFængselsKort();
                     spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
                     spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card"));
