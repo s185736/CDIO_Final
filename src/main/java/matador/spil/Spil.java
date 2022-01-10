@@ -11,8 +11,8 @@ import matador.spilleplade.genstand.Hus;
 import matador.spilleplade.felter.Faengsel;
 import matador.spilleplade.genstand.Terning;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Spil {
 
@@ -95,8 +95,10 @@ public class Spil {
     }
 
     private void opretSpillere(int antalSpillere) {
-        ArrayList<String> types;
-        types = new ArrayList<>(Arrays.asList(Spiller.Type.valuesToString()));
+        LinkedList<String> types;
+        types = new LinkedList<>(Arrays.asList(Spiller.Type.valuesToString()));
+        //ArrayList<String> types;
+        //types = new ArrayList<>(Arrays.asList(Spiller.Type.valuesToString()));
 
         int i = 0;
         while (i < antalSpillere) {
@@ -119,7 +121,7 @@ public class Spil {
         if (antalSpillere == 2) {
             return 20;
         } else if (antalSpillere == 3) {
-            return 18;
+            return 1;
         } else if (antalSpillere == 4) {
             return 16;
         }

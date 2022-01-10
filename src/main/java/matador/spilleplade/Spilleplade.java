@@ -7,8 +7,8 @@ import matador.spilleplade.felter.*;
 import matador.spilleplade.genstand.Hus;
 
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 
 public class Spilleplade {
@@ -42,7 +42,7 @@ public class Spilleplade {
 
     /*Få husfelter i en array med farvetype.*/
     public Hus[] getFeltvedTypeFarve(Color ...types) {
-        ArrayList<Hus> felter = new ArrayList<>();
+        LinkedList<Hus> felter = new LinkedList<>();
         Hus[] husFelt = this.getHusFelt();
         for (int i = 0, husFeltLength = husFelt.length; i < husFeltLength; i++) {
             Hus feltH = husFelt[i];
@@ -59,7 +59,7 @@ public class Spilleplade {
 
     /*Få husfelter i en array.*/
     public Hus[] getHusFelt() {
-        ArrayList<Hus> felter = new ArrayList<>();
+        LinkedList<Hus> felter = new LinkedList<>();
         Felt[] felts1 = this.felts;
         for (int i = 0, felts1Length = felts1.length; i < felts1Length; i++) {
             Felt felt = felts1[i];
@@ -73,7 +73,7 @@ public class Spilleplade {
 
     /*Få husfelter i en array som er ejet af en spiller.*/
     public Hus[] getFieldsOwnedByPlayer(Spiller spiller) {
-        ArrayList<Hus> felter = new ArrayList<>();
+        LinkedList<Hus> felter = new LinkedList<>();
         Hus[] husFelt = this.getHusFelt();
         for (int i = 0, husFeltLength = husFelt.length; i < husFeltLength; i++) {
             Hus field = husFelt[i];

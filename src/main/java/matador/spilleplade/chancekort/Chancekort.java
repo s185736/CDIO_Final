@@ -7,8 +7,8 @@ import matador.spilleplade.felter.Felt;
 import matador.spilleplade.genstand.Hus;
 
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 
 public class Chancekort {
@@ -36,9 +36,9 @@ public class Chancekort {
             if (spiller == null) {
             } else {
                 spiller.setTurHandling(() -> {
-                    ArrayList<Felt> felts = new ArrayList<>(Arrays.asList(spil.getFelter()));
+                    LinkedList<Felt> felts = new LinkedList<>(Arrays.asList(spil.getFelter()));
                     felts.removeIf(felt -> !(felt instanceof Hus)); //Anvendes kun til felt huse.
-                    ArrayList<Felt> feltAtBruge = new ArrayList<>();
+                    LinkedList<Felt> feltAtBruge = new LinkedList<>();
                     
                     /*For loop til at tjekke om der er tilgængelige felter.*/
                     for (int i = 0, feltsSize = felts.size(); i < feltsSize; i++) {
