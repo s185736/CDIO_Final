@@ -52,6 +52,7 @@ public class Faengsel extends Felt {
         return this.erPaaBesoeg;
     }
 
+    /*Handling for at komme ud af fængsel*/
     @Override
     public void koerHandling(Spil spil) {
         if (this.erPaaBesoeg) {
@@ -80,6 +81,10 @@ public class Faengsel extends Felt {
             spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card.num") + spiller.getFængselsKort() + Oversaetter.t("spilleplade.felt.faengsel.free.card.num2"));
         }
            /* if ( faengselMulighed.equals("Terningekast") ) {
+                    this.terning.kast();
+                    int faceValue = this.terning.getFaceValue();
+                    this.getGui().setDie(faceValue);
+
                     if (faceValue1 == faceValue2) {
                         erPaaBesoeg = true;
                         spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
