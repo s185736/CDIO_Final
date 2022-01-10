@@ -79,7 +79,7 @@ public class Faengsel extends Felt {
         } */
 
         Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
-        String faengselMulighed;
+        String faengselMulighed = "";
             // switchcase for drop ned menu over muligheder for at komme ud af fængsel
         switch (spiller.forladFaengsel){
             case 1: faengselMulighed = spil.getGui().getUserSelection("Betal");
