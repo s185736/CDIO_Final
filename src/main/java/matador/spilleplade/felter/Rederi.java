@@ -16,8 +16,8 @@ public class Rederi extends Felt {
                 Oversaetter.t("spilleplade.felt.scandlines1.feltnavn"),
                 Oversaetter.t("spilleplade.felt.scandlines1.beskrivelse"),
                 Oversaetter.t("spilleplade.felt.scandlines1.underBeskrivelse"),
-                Color.BLACK,
-                Color.WHITE
+                Color.cyan, //BAGGRUND
+                Color.BLACK //TEKST
         );
     }
 

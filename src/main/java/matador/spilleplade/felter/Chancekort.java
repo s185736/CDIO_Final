@@ -14,8 +14,8 @@ public class Chancekort extends Felt {
                 Oversaetter.t("spilleplade.felt.chance.feltnavn"),
                 Oversaetter.t("spilleplade.felt.chance.beskrivelse"),
                 Oversaetter.t("spilleplade.felt.chance.underBeskrivelse"),
-                Color.BLACK,
-                Color.WHITE
+                Color.WHITE, //BAGGRUND
+                Color.BLACK //TEKST
         );
     }
 

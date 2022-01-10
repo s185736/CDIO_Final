@@ -14,8 +14,8 @@ public class Parkering extends Felt {
                 Oversaetter.t("spilleplade.felt.parking.feltnavn"),
                 Oversaetter.t("spilleplade.felt.parking.beskrivelse"),
                 Oversaetter.t("spilleplade.felt.parking.underBeskrivelse"),
-                Color.BLACK,
-                Color.WHITE
+                Color.white,
+                Color.orange
         );
     }
 
