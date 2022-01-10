@@ -210,6 +210,16 @@ public class Spil {
         System.exit(0);
     }
 
+    public int terningeKast (int terning, int terning1){
+        this.terning.kast();
+        this.terning1.kast();
+        int faceValue1 = this.terning.getFaceValue();
+        int faceValue2 = this.terning1.getFaceValue();
+        int rykDistance = faceValue1 + faceValue2;
+        this.gui.setDice(faceValue1, faceValue2);
+        return rykDistance;
+    }
+
 
     public void spilMatadorRunde(Spiller nuvaerendeSpiller) {
         switch (this.gui.getUserButtonPressed(Oversaetter.t("kast.terning") + " " + nuvaerendeSpiller.getNavn() + Oversaetter.t("kast.terning1"), "Kast")) {
@@ -225,4 +235,5 @@ public class Spil {
         Felt felt = this.spilleplade.getPlayerField(nuvaerendeSpiller);
         felt.koerHandling(this);
     }
+
 }

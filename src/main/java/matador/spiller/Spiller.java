@@ -71,9 +71,7 @@ public class Spiller {
         this.spiller.setBalance(this.lagerStash.getMaengdeBeloeb());
     }
 
-    public void forladFaengsel(){
-
-    }
+    public int forladFaengsel;
 
     /*Henter mængde af fængselskorte.*/
     public int getFængselsKort() {return this.faengselsKort; }

@@ -79,8 +79,32 @@ public class Faengsel extends Felt {
         } */
 
         Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
+        String faengselMulighed;
             // switchcase for drop ned menu over muligheder for at komme ud af fængsel
-        switch (spiller.forladFaengsel()){
+        switch (spiller.forladFaengsel){
+            case 1: faengselMulighed = spil.getGui().getUserSelection("Betal");
+                    spiller.tilfoejBalance(-2);
+                    spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
+
+                break;
+            case 2: faengselMulighed = spil.getGui().getUserSelection("Fængselskort");
+                    spiller.getFængselsKort();
+                    spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
+                    spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card"));
+
+                    spiller.fjernFaengselsKort(1);
+
+                break;
+           /* case 3: spil.terningeKast(int terning, int terning1) = spil.getGui().getUserSelection("Terningekast");
+                    if (faceValue1 == faceValue2) {
+                        erPaaBesoeg = false;
+                        spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
+                    }
+                    else if (faceValue1 != faceValue2){
+
+                    }
+
+                break; */
 
         }
 
