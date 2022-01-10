@@ -8,8 +8,99 @@ kast.terning2: kastede
 kast.terning3: har passeret start feltet og får 2M
 
 type.hvemerhvem: Hvilken spiller er du?
-
 getmoney.spiller: har nu passeret start feltet og får 2M
+
+spilleplade.felt.roedovrevej.beskrivelse:Rødovrevej
+spilleplade.felt.roedovrevej.underBeskrivelse:'Rødovrevej'
+
+spilleplade.felt.hvidovrevej.beskrivelse:Hvidovrevej
+spilleplade.felt.hvidovrevej.underBeskrivelse:'Hvidovrevej'
+
+spilleplade.felt.indkomstskat.beskrivelse:Indkomstskat
+spilleplade.felt.indkomstskat.underBeskrivelse:'Indkomstskat'
+
+spilleplade.felt.scandlines1.beskrivelse:Scandlines Gedser-Rostock
+spilleplade.felt.scandlines1.underBeskrivelse:'Scandlines Gedser-Rostock'
+
+spilleplade.felt.roskildevej.beskrivelse:Roskildevej
+spilleplade.felt.roskildevej.underBeskrivelse:'Roskildevej'
+
+spilleplade.felt.valbylanggade.beskrivelse:Valby Langgade
+spilleplade.felt.valbylanggade.underBeskrivelse:'Valby Langgade'
+
+spilleplade.felt.allegade.beskrivelse:Allegade
+spilleplade.felt.allegade.underBeskrivelse:'Allegade'
+
+spilleplade.felt.frederiksbergalle.beskrivelse:Frederiksberg Alle
+spilleplade.felt.frederiksbergalle.underBeskrivelse:'Frederiksberg Alle'
+
+spilleplade.felt.tuborgsquash.beskrivelse:Tuborg Squash
+spilleplade.felt.tuborgsquash.underBeskrivelse:'Tuborg Squash'
+
+spilleplade.felt.bulowsvej.beskrivelse:Bülowsvej
+spilleplade.felt.bulowsvej.underBeskrivelse:'Bülowsvej'
+
+spilleplade.felt.glkongevej.beskrivelse:Gammel Kongevej
+spilleplade.felt.glkongevej.underBeskrivelse:'Gammel Kongevej'
+
+spilleplade.felt.molslinien.beskrivelse:Mols-Linien
+spilleplade.felt.molslinien.underBeskrivelse:'Mols-Linien'
+
+spilleplade.felt.bernstorffsvej.beskrivelse:Bernstorffsvej
+spilleplade.felt.bernstorffsvej.underBeskrivelse:'Bernstorffsvej'
+
+spilleplade.felt.hellerupsvej.beskrivelse:Hellerupsvej
+spilleplade.felt.hellerupsvej.underBeskrivelse:'Hellerupsvej'
+
+spilleplade.felt.strandvejen.beskrivelse:Strandvejen
+spilleplade.felt.strandvejen.underBeskrivelse:'Strandvejen'
+
+spilleplade.felt.trianglen.beskrivelse:Trianglen
+spilleplade.felt.trianglen.underBeskrivelse:'Trianglen'
+
+spilleplade.felt.osterbrogade.beskrivelse:Østerbrogade
+spilleplade.felt.osterbrogade.underBeskrivelse:'Østerbrogade'
+
+spilleplade.felt.gronningen.beskrivelse:Grønningen
+spilleplade.felt.gronningen.underBeskrivelse:'Grønningen'
+
+spilleplade.felt.scandlines2.beskrivelse:Scandlines Helsingør-Helsingborg
+spilleplade.felt.scandlines2.underBeskrivelse:'Scandlines Helsingør-Helsingborg'
+
+spilleplade.felt.bredgade.beskrivelse:Bredgade
+spilleplade.felt.bredgade.underBeskrivelse:'Bredgade'
+
+spilleplade.felt.kgsnytorv.beskrivelse:Kongens Nytorv
+spilleplade.felt.kgsnytorv.underBeskrivelse:'Kongens Nytorv'
+
+spilleplade.felt.cocacola.beskrivelse:Coca Cola
+spilleplade.felt.cocacola.underBeskrivelse:'Coca Cola'
+
+spilleplade.felt.ostergade.beskrivelse:Østergade
+spilleplade.felt.ostergade.underBeskrivelse:'Østergade'
+
+spilleplade.felt.amagertorv.beskrivelse:Amagertorv
+spilleplade.felt.amagertorv.underBeskrivelse:'Amagertorv'
+
+spilleplade.felt.vimmelskaftet.beskrivelse:Vimmelskaftet
+spilleplade.felt.vimmelskaftet.underBeskrivelse:'Vimmelskaftet'
+
+spilleplade.felt.nygade.beskrivelse:Ny Gade
+spilleplade.felt.nygade.underBeskrivelse:'Ny Gade'
+
+spilleplade.felt.scandlines3.beskrivelse:Scandlines Rødby-Puttgarden
+spilleplade.felt.scandlines3.underBeskrivelse:'Scandlines Rødby-Puttgarden'
+
+spilleplade.felt.frederiksgade.beskrivelse:Frederiksgade
+spilleplade.felt.frederiksgade.underBeskrivelse:'Frederiksgade'
+
+spilleplade.felt.statsskat.beskrivelse:Statsskat
+spilleplade.felt.statsskat.underBeskrivelse:'Statsskat'
+
+spilleplade.felt.raadhuspladsen.beskrivelse:Rådhuspladsen
+spilleplade.felt.raadhuspladsen.underBeskrivelse:'Rådhuspladsen'
+
+
 
 spilleplade.felt.burgerbaren.beskrivelse:Burgerbaren
 spilleplade.felt.burgerbaren.underBeskrivelse:'Burgerbaren'

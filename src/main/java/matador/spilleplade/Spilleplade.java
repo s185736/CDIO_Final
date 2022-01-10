@@ -161,36 +161,45 @@ public class Spilleplade {
                 * HUSK BLOT AT FØLGE SAMME STRUKTUR
                 * ÆNDRING AF FELTER FOREGÅR BÅDE I Spillerplade.java samt dansk.txt*/
                 new Start().setFeltNavn("Start") .setUnderBeskrivelse("") .setBaggrundsFarve(Color.GREEN),
-                new Hus(Oversaetter.t("spilleplade.felt.burgerbaren.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("M1"),
-                new Hus(Oversaetter.t("spilleplade.felt.pizzeriaet.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("M1"),
-
+                new Hus(Oversaetter.t("spilleplade.felt.roedovrevej.beskrivelse"), 1, Color.BLUE).setUnderBeskrivelse("M1"),
                 new Chancekort().setFeltNavn("Chance").setUnderBeskrivelse("?"),
-                new Hus(Oversaetter.t("spilleplade.felt.slikbutikken.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("M1"),
-                new Hus(Oversaetter.t("spilleplade.felt.iskiosken.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("M1"),
-
+                new Hus(Oversaetter.t("spilleplade.felt.hvidovrevej.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("M1"),
+                new IndkomstSkat(true).setUnderBeskrivelse("IndkomstSkat"),
+                new Rederi(true).setUnderBeskrivelse("Scandlines"),
+                new Hus(Oversaetter.t("spilleplade.felt.roskildevej.beskrivelse"), 1, Color.ORANGE).setUnderBeskrivelse("M1"),
+                new Chancekort().setFeltNavn("Chance").setUnderBeskrivelse("?"),
+                new Hus(Oversaetter.t("spilleplade.felt.valbylanggade.beskrivelse"), 1, Color.ORANGE).setUnderBeskrivelse("M1"),
+                new Hus(Oversaetter.t("spilleplade.felt.allegade.beskrivelse"), 1, Color.ORANGE).setUnderBeskrivelse("M1"),
                 new Faengsel(true).setUnderBeskrivelse("På besøg"),
-                new Hus(Oversaetter.t("spilleplade.felt.museet.beskrivelse"), 2, Color.WHITE).setUnderBeskrivelse("M2"),
-                new Hus(Oversaetter.t("spilleplade.felt.biblioteket.beskrivelse"), 2, Color.WHITE).setUnderBeskrivelse("M2"),
-
+                new Hus(Oversaetter.t("spilleplade.felt.frederiksbergalle.beskrivelse"), 1, Color.GREEN).setUnderBeskrivelse("M1"),
+                new Hus(Oversaetter.t("spilleplade.felt.tuborgsquash.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("M1"),
+                new Hus(Oversaetter.t("spilleplade.felt.bulowsvej.beskrivelse"), 1, Color.GREEN).setUnderBeskrivelse("M1"),
+                new Hus(Oversaetter.t("spilleplade.felt.glkongevej.beskrivelse"), 1, Color.GREEN).setUnderBeskrivelse("M1"),
+                new Rederi(true).setUnderBeskrivelse("Scandlines"),
+                new Hus(Oversaetter.t("spilleplade.felt.bernstorffsvej.beskrivelse"), 1, Color.GRAY).setUnderBeskrivelse("M1"),
                 new Chancekort().setFeltNavn("Chance").setUnderBeskrivelse("?"),
-                new Hus(Oversaetter.t("spilleplade.felt.skaterparken.beskrivelse"), 2, Color.WHITE).setUnderBeskrivelse("M3"),
-                new Hus(Oversaetter.t("spilleplade.felt.swimmingpoolen.beskrivelse"), 2, Color.WHITE).setUnderBeskrivelse("M3"),
-
+                new Hus(Oversaetter.t("spilleplade.felt.hellerupsvej.beskrivelse"), 1, Color.GRAY).setUnderBeskrivelse("M1"),
+                new Hus(Oversaetter.t("spilleplade.felt.strandvejen.beskrivelse"), 1, Color.GRAY).setUnderBeskrivelse("M1"),
                 new Parkering().setFeltNavn("Parkering").setUnderBeskrivelse("P"),
-                new Hus(Oversaetter.t("spilleplade.felt.spillehallen.beskrivelse"), 3, Color.WHITE).setUnderBeskrivelse("M3"),
-                new Hus(Oversaetter.t("spilleplade.felt.biografen.beskrivelse"), 3, Color.WHITE).setUnderBeskrivelse("M3"),
-
+                new Hus(Oversaetter.t("spilleplade.felt.trianglen.beskrivelse"), 1, Color.RED).setUnderBeskrivelse("M1"),
                 new Chancekort().setFeltNavn("Chance").setUnderBeskrivelse("?"),
-                new Hus(Oversaetter.t("spilleplade.felt.legetøjsbutikken.beskrivelse"), 3, Color.WHITE).setUnderBeskrivelse("M3"),
-                new Hus(Oversaetter.t("spilleplade.felt.dyrehandlen.beskrivelse"), 3, Color.WHITE).setUnderBeskrivelse("M3"),
-
+                new Hus(Oversaetter.t("spilleplade.felt.osterbrogade.beskrivelse"), 1, Color.RED).setUnderBeskrivelse("M1"),
+                new Hus(Oversaetter.t("spilleplade.felt.gronningen.beskrivelse"), 1, Color.RED).setUnderBeskrivelse("M1"),
+                new Rederi(true).setUnderBeskrivelse("Scandlines"),
+                new Hus(Oversaetter.t("spilleplade.felt.bredgade.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("M1"),
+                new Hus(Oversaetter.t("spilleplade.felt.kgsnytorv.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("M1"),
+                new Hus(Oversaetter.t("spilleplade.felt.cocacola.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("M1"),
+                new Hus(Oversaetter.t("spilleplade.felt.ostergade.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("M1"),
                 new Faengsel(false).setUnderBeskrivelse("Fængsel"),
-                new Hus(Oversaetter.t("spilleplade.felt.bowlinghallen.beskrivelse"), 4, Color.WHITE).setUnderBeskrivelse("M4"),
-                new Hus(Oversaetter.t("spilleplade.felt.zoo.beskrivelse"), 4, Color.WHITE).setUnderBeskrivelse("M4"),
-
+                new Hus(Oversaetter.t("spilleplade.felt.amagertorv.beskrivelse"), 1, Color.YELLOW).setUnderBeskrivelse("M1"),
+                new Hus(Oversaetter.t("spilleplade.felt.vimmelskaftet.beskrivelse"), 1, Color.YELLOW).setUnderBeskrivelse("M1"),
                 new Chancekort().setFeltNavn("Chance").setUnderBeskrivelse("?"),
-                new Hus(Oversaetter.t("spilleplade.felt.vandlandet.beskrivelse"), 5, Color.WHITE).setUnderBeskrivelse("M5"),
-                new Hus(Oversaetter.t("spilleplade.felt.strandpromenaden.beskrivelse"), 5, Color.WHITE).setUnderBeskrivelse("M5"),
+                new Hus(Oversaetter.t("spilleplade.felt.nygade.beskrivelse"), 1, Color.YELLOW).setUnderBeskrivelse("M1"),
+                new Rederi(true).setUnderBeskrivelse("Scandlines"),
+                new Chancekort().setFeltNavn("Chance").setUnderBeskrivelse("?"),
+                new Hus(Oversaetter.t("spilleplade.felt.frederiksgade.beskrivelse"), 1, Color.PINK).setUnderBeskrivelse("M1"),
+                new StatsSkat(true).setUnderBeskrivelse("Statsskat"),
+                new Hus(Oversaetter.t("spilleplade.felt.raadhuspladsen.beskrivelse"), 1, Color.PINK).setUnderBeskrivelse("M1"),
         };
     }
 }
