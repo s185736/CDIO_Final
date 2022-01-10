@@ -163,7 +163,7 @@ public class Spilleplade {
                 new Start().setFeltNavn("Start") .setUnderBeskrivelse("") .setBaggrundsFarve(Color.GREEN),
                 new Hus(Oversaetter.t("spilleplade.felt.roedovrevej.beskrivelse"), 1, Color.BLUE).setUnderBeskrivelse("M1"),
                 new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?"),
-                new Hus(Oversaetter.t("spilleplade.felt.hvidovrevej.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("M1"),
+                new Hus(Oversaetter.t("spilleplade.felt.hvidovrevej.beskrivelse"), 1, Color.BLUE).setUnderBeskrivelse("M1"),
                 new IndkomstSkat(true).setUnderBeskrivelse("IndkomstSkat"),
                 new Rederi(true).setUnderBeskrivelse("Scandlines"),
                 new Hus(Oversaetter.t("spilleplade.felt.roskildevej.beskrivelse"), 1, Color.ORANGE).setUnderBeskrivelse("M1"),
