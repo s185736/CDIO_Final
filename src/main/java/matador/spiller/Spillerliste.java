@@ -1,9 +1,12 @@
 package matador.spiller;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
 
 /*Spillerliste*/
-public class Spillerliste extends ArrayList<Spiller> {
+public class Spillerliste extends LinkedList<Spiller> {
 
     private int spillerIndex; //Indekset, der bruges til at bestemme, hvilken spiller der er den aktuelle.
 
@@ -56,7 +59,8 @@ public class Spillerliste extends ArrayList<Spiller> {
     /*Få spiller med mest penge. Og returnere vinderen af spillet.*/
     public Spiller[] getVinderMatador() {
         Spiller vinder = null;
-        ArrayList<Spiller> vindere = new ArrayList<>();
+        //Linkedlist
+        LinkedList<Spiller> vindere = new LinkedList<>();
         int i = 0, thisSize = this.size();
         while (i < thisSize) {
             Spiller spiller = this.get(i);
@@ -75,8 +79,30 @@ public class Spillerliste extends ArrayList<Spiller> {
                 vinder = spiller;
                 vindere.add(spiller);
             }
+
+        //Arraylist
+        /*ArrayList<Spiller> vindere = new ArrayList<>();
+        int i = 0, thisSize = this.size();
+        while (i < thisSize) {
+            Spiller spiller = this.get(i);
+            if (vinder != null) {
+                if (spiller.getBalance() <= vinder.getBalance()) {
+                    if (spiller.getBalance() >= vinder.getBalance()) {
+                        vinder = spiller;
+                        vindere.add(spiller);
+                    }
+                } else {
+                    vinder = spiller;
+                    vindere.clear();
+                    vindere.add(spiller);
+                }
+            } else {
+                vinder = spiller;
+                vindere.add(spiller);
+            }*/
             i++;
         }
         return vindere.toArray(new Spiller[] {});
+
     }
 }
