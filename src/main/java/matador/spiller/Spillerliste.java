@@ -1,8 +1,5 @@
 package matador.spiller;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.LinkedList;
 
 /*Spillerliste*/
@@ -79,30 +76,8 @@ public class Spillerliste extends LinkedList<Spiller> {
                 vinder = spiller;
                 vindere.add(spiller);
             }
-
-        //Arraylist
-        /*ArrayList<Spiller> vindere = new ArrayList<>();
-        int i = 0, thisSize = this.size();
-        while (i < thisSize) {
-            Spiller spiller = this.get(i);
-            if (vinder != null) {
-                if (spiller.getBalance() <= vinder.getBalance()) {
-                    if (spiller.getBalance() >= vinder.getBalance()) {
-                        vinder = spiller;
-                        vindere.add(spiller);
-                    }
-                } else {
-                    vinder = spiller;
-                    vindere.clear();
-                    vindere.add(spiller);
-                }
-            } else {
-                vinder = spiller;
-                vindere.add(spiller);
-            }*/
             i++;
         }
         return vindere.toArray(new Spiller[] {});
-
     }
 }
