@@ -80,21 +80,26 @@ public class Faengsel extends Felt {
 
         Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
         String faengselMulighed = "";
-        faengselMulighed = spil.getGui().getUserSelection("Hvordan vil du ud af faengsel?", "Betal", "Fængselskort");
+        String[] valg = {"Betal", "Fængselskort"};
+        faengselMulighed = spil.getGui().getUserSelection("Hvordan vil du ud af faengsel?", valg);
+
             // switchcase for drop ned menu over muligheder for at komme ud af fængsel
         switch (spiller.forladFaengsel){
-            case 1: faengselMulighed = "Betal";
+            case 1: valg.equals("Betal");
                     spiller.tilfoejBalance(-2);
+                    spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.action"));
                     spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
+                    spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.pay"));
 
                 break;
-            case 2: faengselMulighed = "Fængselskort";
+            case 2: valg.equals("Fængselskort");
                     spiller.getFængselsKort();
+                    spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.action"));
                     spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
                     spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card"));
 
                     spiller.fjernFaengselsKort(1);
-
+                    spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card.num") + spiller.getFængselsKort() + Oversaetter.t("spilleplade.felt.faengsel.free.card.num2"));
                 break;
            /* case 3: spil.terningeKast(int terning, int terning1) = spil.getGui().getUserSelection("Terningekast");
                     if (faceValue1 == faceValue2) {
