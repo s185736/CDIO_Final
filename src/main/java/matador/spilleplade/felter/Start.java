@@ -32,7 +32,7 @@ public class Start extends Felt {
     @Override
     public GUI_Start getGUIFelt()
     {
-        return (GUI_Start) this.guiField;
+        return (GUI_Start) this.gui_felt;
     }
 
     @Override

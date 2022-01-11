@@ -12,12 +12,12 @@ public abstract class Felt {
     private String feltNavn; //navn af feltet.
     private String beskrivelse; //beskrivelse af feltet.
     private String underBeskrivelse; //sub-beskrivelse af feltet.
-    protected GUI_Field guiField; //GUI_Field af dette felt.
+    protected GUI_Field gui_felt; //GUI_Field af dette felt.
 
     /*Konstruktør af Felt.*/
     public Felt()
     {
-        this.guiField = this.opretGUIFelt();
+        this.gui_felt = this.opretGUIFelt();
     }
 
 
@@ -51,7 +51,7 @@ public abstract class Felt {
     /*Oprette navnet af feltet, også på den korresponderet GUI_felt.*/
     public Felt setFeltNavn(String feltNavn) {
         this.feltNavn = feltNavn;
-        this.guiField.setTitle(this.feltNavn);
+        this.gui_felt.setTitle(this.feltNavn);
         return this;
     }
 
@@ -64,7 +64,7 @@ public abstract class Felt {
     /*Opretter beskrivelsen af dette felt og med dens korresponderede GUI_field.*/
     public Felt setBeskrivelse(String beskrivelse) {
         this.beskrivelse = beskrivelse;
-        this.guiField.setDescription(this.beskrivelse);
+        this.gui_felt.setDescription(this.beskrivelse);
         return this;
     }
 
@@ -78,26 +78,26 @@ public abstract class Felt {
     /*Opretter sub beskrivelsen af dette felt og med dens korresponderede GUI_field.*/
     public Felt setUnderBeskrivelse(String underBeskrivelse) {
         this.underBeskrivelse = underBeskrivelse;
-        this.guiField.setSubText(this.underBeskrivelse);
+        this.gui_felt.setSubText(this.underBeskrivelse);
         return this;
     }
     /*Opretter baggrundsfarven på dette felt og med dens korresponderede GUI_field.*/
     public Felt setBaggrundsFarve(Color baggrundsfarve) {
-        this.guiField.setBackGroundColor(baggrundsfarve);
+        this.gui_felt.setBackGroundColor(baggrundsfarve);
         return this;
     }
 
     /*Opretter forgrundsfarven på dette felt og med dens korresponderede GUI_field.*/
     public Felt setForgrundsFarve(Color forgrundsfarve) {
-        this.guiField.setForeGroundColor(forgrundsfarve);
+        this.gui_felt.setForeGroundColor(forgrundsfarve);
         return this;
     }
 
     public void setBil(Spiller spiller) {
-        this.guiField.setCar(spiller.getSpiller(), true);
+        this.gui_felt.setCar(spiller.getSpiller(), true);
     }
 
     public void fjernBil(Spiller spiller) {
-        this.guiField.setCar(spiller.getSpiller(), false);
+        this.gui_felt.setCar(spiller.getSpiller(), false);
     }
 }

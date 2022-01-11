@@ -37,7 +37,7 @@ public class Ejendom extends Felt {
     @Override
     public GUI_Street getGUIFelt()
     {
-        return (GUI_Street) this.guiField;
+        return (GUI_Street) this.gui_felt;
     }
 
     /*Henter typen af dette Hus.*/
@@ -106,12 +106,12 @@ public class Ejendom extends Felt {
 
     @Override
     public void koerHandling(Spil spil) {
-        Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
+        Spiller spiller = spil.getSpiller().getNuvarendeSpiller();
         if (this.erEjet()) {
             if (this.erEjetAfSpiller(spiller)) {
                 return;
             }
-            this.betaltLeje(spil.getBoard(), spiller);
+            this.betaltLeje(spil.getSpillerplade(), spiller);
             spil.getGui().showMessage("Feltet tilhører " + this.ejer.getNavn() + ", af denne grund tjener ejeren " + this.getLeje() + "M af " + spiller.getNavn()+".");
         } else {
             this.koebEjendom(spiller);

@@ -32,7 +32,7 @@ public class Rederi extends Felt {
     @Override
     public GUI_Street getGUIFelt()
     {
-        return (GUI_Street) this.guiField;
+        return (GUI_Street) this.gui_felt;
     }
 
     @Override

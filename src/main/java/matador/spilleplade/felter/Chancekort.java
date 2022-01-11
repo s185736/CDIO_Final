@@ -30,13 +30,13 @@ public class Chancekort extends Felt {
     @Override
     public GUI_Chance getGUIFelt()
     {
-        return (GUI_Chance) this.guiField;
+        return (GUI_Chance) this.gui_felt;
     }
 
     @Override
     public void koerHandling(Spil spil)
     {
-        spil.getChanceDeck().draw().play(spil);
+        spil.getChanceBunke().draw().play(spil);
     }
 
 }

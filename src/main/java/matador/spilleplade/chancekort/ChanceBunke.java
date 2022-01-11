@@ -55,16 +55,16 @@ public class ChanceBunke {
     static private Chancekort[] standardeChancekorte= new Chancekort[] {
                 new Chancekort(
                         Oversaetter.t("chance.beskrivelse.to_start"),
-                        (spil) -> spil.rykSpiller(spil.getPlayers().getNuvarendeSpiller(), Oversaetter.t("spilleplade.felt.start.feltnavn"))
+                        (spil) -> spil.rykSpiller(spil.getSpiller().getNuvarendeSpiller(), Oversaetter.t("spilleplade.felt.start.feltnavn"))
                 ),
                 new Chancekort(
                         Oversaetter.t("chance.beskrivelse.move_5_fields"),
                         (spil) -> {
                             String feltSvar = spil.getGui().getUserSelection(Oversaetter.t("chance.beskrivelse.move_5_fields.question"), "1", "2", "3", "4", "5");
                             int antalFelter = Integer.parseInt(feltSvar);
-                            Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
+                            Spiller spiller = spil.getSpiller().getNuvarendeSpiller();
                             spil.rykSpiller(spiller, antalFelter);
-                            spil.getBoard().getPlayerField(spiller).koerHandling(spil);
+                            spil.getSpillerplade().getSpillerFelt(spiller).koerHandling(spil);
                         }
                 ),
                 new Chancekort(
@@ -105,50 +105,50 @@ public class ChanceBunke {
                             );
 
                             if (answer.equals(Oversaetter.t("chance.beskrivelse.felt_eller_kort.move"))) {
-                                Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
+                                Spiller spiller = spil.getSpiller().getNuvarendeSpiller();
 
                                 spil.rykSpiller(spiller, 1);
-                                spil.getBoard().getPlayerField(spiller).koerHandling(spil);
+                                spil.getSpillerplade().getSpillerFelt(spiller).koerHandling(spil);
                             } else {
-                                spil.getChanceDeck().draw().play(spil);
+                                spil.getChanceBunke().draw().play(spil);
                             }
                         }
                 ),
                 new Chancekort(
                         Oversaetter.t("chance.beskrivelse.slik"),
-                        (spil) -> spil.getPlayers().getNuvarendeSpiller().tilfoejBalance(-2)
+                        (spil) -> spil.getSpiller().getNuvarendeSpiller().tilfoejBalance(-2)
                 ),
                 new Chancekort(
                         Oversaetter.t("chance.beskrivelse.faengsel"),
-                        (spil) -> spil.getPlayers().getNuvarendeSpiller().tilfoejFængselsKort(1)
+                        (spil) -> spil.getSpiller().getNuvarendeSpiller().tilfoejFængselsKort(1)
                 ),
                 new Chancekort(
                         Oversaetter.t("chance.beskrivelse.strandpromenaden"),
                         (spil) -> {
-                            Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
+                            Spiller spiller = spil.getSpiller().getNuvarendeSpiller();
 
                             spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.strandpromenaden.beskrivelse"));
-                            spil.getBoard().getPlayerField(spiller).koerHandling(spil);
+                            spil.getSpillerplade().getSpillerFelt(spiller).koerHandling(spil);
                         }
                 ),
                 new Chancekort(
                         Oversaetter.t("chance.beskrivelse.foedselsdag"),
                         (spil) -> {
-                            Spillerliste players = spil.getPlayers();
-                            for (int i = 0, playersSize = players.size(); i < playersSize; i++) {
-                                Spiller spiller = players.get(i);
+                            Spillerliste spillere = spil.getSpiller();
+                            for (int i = 0, spillerAntal = spillere.size(); i < spillerAntal; i++) {
+                                Spiller spiller = spillere.get(i);
                                 spiller.tilfoejBalance(-1);
-                                players.getNuvarendeSpiller().tilfoejBalance(1);
+                                spillere.getNuvarendeSpiller().tilfoejBalance(1);
                             }
                         }
                 ),
                 new Chancekort(
                         Oversaetter.t("chance.beskrivelse.lektier"),
-                        (spil) -> spil.getPlayers().getNuvarendeSpiller().tilfoejBalance(2)
+                        (spil) -> spil.getSpiller().getNuvarendeSpiller().tilfoejBalance(2)
                 ),
                 new Chancekort(
                         Oversaetter.t("chance.beskrivelse.skaterparken"),
-                        (spil) -> spil.rykSpiller(spil.getPlayers().getNuvarendeSpiller(), Oversaetter.t("spilleplade.felt.skaterparken.beskrivelse"))
+                        (spil) -> spil.rykSpiller(spil.getSpiller().getNuvarendeSpiller(), Oversaetter.t("spilleplade.felt.skaterparken.beskrivelse"))
                 ),
         };
     }

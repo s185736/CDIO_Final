@@ -21,7 +21,7 @@ public class Spil {
     private Terning terning;
     private Terning terning1;
     private ChanceBunke chanceBunke;
-    private Spillerliste players;
+    private Spillerliste spillere;
 
     /*Konstruktør*/
     public Spil() {
@@ -29,7 +29,7 @@ public class Spil {
         this.gui = new GUI(this.spilleplade.getGUIFelt());
         this.terning = new Terning();
         this.chanceBunke = new ChanceBunke();
-        this.players = new Spillerliste();
+        this.spillere = new Spillerliste();
         this.terning1 = new Terning();
     }
 
@@ -38,17 +38,17 @@ public class Spil {
         return this.gui;
     }
 
-    public Spilleplade getBoard()
+    public Spilleplade getSpillerplade()
     {
         return this.spilleplade;
     }
 
-    public Spillerliste getPlayers()
+    public Spillerliste getSpiller()
     {
-        return this.players;
+        return this.spillere;
     }
 
-    public ChanceBunke getChanceDeck()
+    public ChanceBunke getChanceBunke()
     {
         return this.chanceBunke;
     }
@@ -60,8 +60,8 @@ public class Spil {
 
     /*Rykker spiller med antal felter at rykke.*/
     public void rykSpiller(Spiller spiller, int rykAntalFelter) {
-        Felt nuvaerendeFelt = this.spilleplade.getPlayerField(spiller);
-        this.spilleplade.movePlayer(spiller, rykAntalFelter);
+        Felt nuvaerendeFelt = this.spilleplade.getSpillerFelt(spiller);
+        this.spilleplade.rykSpiller(spiller, rykAntalFelter);
         if (this.spilleretPasseretStartFelt(spiller, nuvaerendeFelt)) {
             spiller.tilfoejBalance(2);
             this.gui.showMessage(spiller.getNavn() + Oversaetter.t("kast.terning3"));
@@ -72,9 +72,9 @@ public class Spil {
 
     /*Rykker spiller til et bestemt felt.*/
     public void rykSpiller(Spiller spiller, String feltNavn) {
-        Felt nuvaerendeFelt = this.spilleplade.getPlayerField(spiller);
+        Felt nuvaerendeFelt = this.spilleplade.getSpillerFelt(spiller);
         Felt rykTilFelt = this.spilleplade.getFeltVedNavn(feltNavn);
-        this.spilleplade.movePlayer(spiller, rykTilFelt);
+        this.spilleplade.rykSpiller(spiller, rykTilFelt);
 
         if (nuvaerendeFelt instanceof Faengsel || rykTilFelt instanceof Faengsel) {
             return;
@@ -111,7 +111,7 @@ public class Spil {
 
             this.gui.addPlayer(spiller.getSpiller());
             this.spilleplade.addPlayer(spiller);
-            this.players.tilfoejSpiller(spiller);
+            this.spillere.tilfoejSpiller(spiller);
             i++;
         }
     }
@@ -123,47 +123,47 @@ public class Spil {
 
     /*Her bestemmer man hvem der skal starte.*/
     private void hvemSkalStarte(int spillereDeltaget){
-        String playerNumberString = "";
+        String spillerNummerString = "";
         switch (spillereDeltaget) {
-            case 2:  playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn());
+            case 2:  spillerNummerString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.spillere.get(0).getNavn(), "2. " + this.spillere.get(1).getNavn());
                 break;
-            case 3:  playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn(), "3. " + this.players.get(2).getNavn());
+            case 3:  spillerNummerString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.spillere.get(0).getNavn(), "2. " + this.spillere.get(1).getNavn(), "3. " + this.spillere.get(2).getNavn());
                 break;
-            case 4:  playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn(), "3. " + this.players.get(2).getNavn(), "4. " + this.players.get(3).getNavn());
+            case 4:  spillerNummerString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.spillere.get(0).getNavn(), "2. " + this.spillere.get(1).getNavn(), "3. " + this.spillere.get(2).getNavn(), "4. " + this.spillere.get(3).getNavn());
                 break;
-            case 5:  playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn(), "3. " + this.players.get(2).getNavn(), "4. " + this.players.get(3).getNavn(), "5. " + this.players.get(4).getNavn());
+            case 5:  spillerNummerString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.spillere.get(0).getNavn(), "2. " + this.spillere.get(1).getNavn(), "3. " + this.spillere.get(2).getNavn(), "4. " + this.spillere.get(3).getNavn(), "5. " + this.spillere.get(4).getNavn());
                 break;
-            case 6:  playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn(), "3. " + this.players.get(2).getNavn(), "4. " + this.players.get(3).getNavn(), "5. " + this.players.get(4).getNavn(), "4. " + this.players.get(5).getNavn());
+            case 6:  spillerNummerString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.spillere.get(0).getNavn(), "2. " + this.spillere.get(1).getNavn(), "3. " + this.spillere.get(2).getNavn(), "4. " + this.spillere.get(3).getNavn(), "5. " + this.spillere.get(4).getNavn(), "4. " + this.spillere.get(5).getNavn());
                 break;
         }
-        playerNumberString = playerNumberString.split("\\.", 2)[0];
-        int i = Integer.parseInt(playerNumberString);
-        this.players.setSpillerIndex(i - 1);
+        spillerNummerString = spillerNummerString.split("\\.", 2)[0];
+        int i = Integer.parseInt(spillerNummerString);
+        this.spillere.setSpillerIndex(i - 1);
     }
 
 
     private boolean spilleretPasseretStartFelt(Spiller spiller, Felt nuvaerendeFelt) {
         Felt nyFelt;
-        nyFelt = this.spilleplade.getPlayerField(spiller);
-        return this.spilleplade.isFieldBefore(nyFelt, nuvaerendeFelt);
+        nyFelt = this.spilleplade.getSpillerFelt(spiller);
+        return this.spilleplade.erFeltFoer(nyFelt, nuvaerendeFelt);
     }
 
 
     public void visVinderMatador() {
-        Spiller[] vinder = this.players.getVinderMatador();
+        Spiller[] vinder = this.spillere.getVinderMatador();
         if (vinder.length <= 1) {
         } else {
             for (int i = 0, winnersLength = vinder.length; i < winnersLength; i++) {
                 Spiller spiller = vinder[i];
                 int feltVaerdi = 0;
-                Ejendom[] feltEjetAfSpiller = this.spilleplade.getFieldsOwnedByPlayer(spiller);
+                Ejendom[] feltEjetAfSpiller = this.spilleplade.getFelterEjetAfSpiller(spiller);
                 for (int j = 0, fieldsOwnedByPlayerLength = feltEjetAfSpiller.length; j < fieldsOwnedByPlayerLength; j++) {
                     Ejendom felt = feltEjetAfSpiller[j];
                     feltVaerdi += felt.getLeje();
                 }
                 spiller.tilfoejBalance(feltVaerdi);
             }
-            vinder = this.players.getVinderMatador();
+            vinder = this.spillere.getVinderMatador();
 
             /*Navnet af vinderen..*/
             if (vinder.length > 1) {
@@ -183,24 +183,24 @@ public class Spil {
         int antalSpillere = valgAfAntalSpillere();
         this.opretSpillere(antalSpillere);
         hvemSkalStarte(antalSpillere);
-        Spiller nuvaerendeSpiller = this.players.getNuvarendeSpiller();
+        Spiller nuvaerendeSpiller = this.spillere.getNuvarendeSpiller();
 
         if (nuvaerendeSpiller.harTurHandlinger()) nuvaerendeSpiller.koerTurHandlinger();
         else {
             spilMatadorRunde(nuvaerendeSpiller);
         }
 
-        this.players.forstoerrePlayerIndex();
-        while (!this.players.erNogenFallit()) {
-            nuvaerendeSpiller = this.players.getNuvarendeSpiller();
+        this.spillere.forstoerrePlayerIndex();
+        while (!this.spillere.erNogenFallit()) {
+            nuvaerendeSpiller = this.spillere.getNuvarendeSpiller();
             if (nuvaerendeSpiller.harTurHandlinger()) nuvaerendeSpiller.koerTurHandlinger();
             else {
                 spilMatadorRunde(nuvaerendeSpiller);
             }
-            this.players.forstoerrePlayerIndex();
+            this.spillere.forstoerrePlayerIndex();
         }
 
-        Spiller falitSpiller = this.players.getSpillerFallit();
+        Spiller falitSpiller = this.spillere.getSpillerFallit();
         this.gui.showMessage(falitSpiller.getNavn() + Oversaetter.t("slut.matador.fallit"));
         this.visVinderMatador();
         this.gui.showMessage("Venligst klik på 'OK' for at afslutte spillet.");
@@ -216,7 +216,7 @@ public class Spil {
         this.gui.setDie(faceValue);
         this.gui.showMessage(new StringBuilder().append(nuvaerendeSpiller.getNavn()).append(Oversaetter.t("kast.terning2")).append(" ").append(faceValue).toString());
         this.rykSpiller(nuvaerendeSpiller, faceValue);
-        Felt felt = this.spilleplade.getPlayerField(nuvaerendeSpiller);
+        Felt felt = this.spilleplade.getSpillerFelt(nuvaerendeSpiller);
         felt.koerHandling(this);
     }
 }

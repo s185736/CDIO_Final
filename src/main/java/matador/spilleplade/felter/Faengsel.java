@@ -19,12 +19,12 @@ public class Faengsel extends Felt {
         super();
 
         this.erPaaBesoeg = erPaaBesoeg;
-        String fieldType;
-        fieldType = erPaaBesoeg ? "besoeg" : "gaatil";
+        String feltType;
+        feltType = erPaaBesoeg ? "besoeg" : "gaatil";
 
-        this.setFeltNavn(Oversaetter.t("spilleplade.felt.faengsel." + fieldType + ".feltnavn"));
-        this.setBeskrivelse(Oversaetter.t("spilleplade.felt.faengsel." + fieldType + ".beskrivelse"));
-        this.setUnderBeskrivelse(Oversaetter.t("spilleplade.felt.faengsel." + fieldType + ".underBeskrivelse"));
+        this.setFeltNavn(Oversaetter.t("spilleplade.felt.faengsel." + feltType + ".feltnavn"));
+        this.setBeskrivelse(Oversaetter.t("spilleplade.felt.faengsel." + feltType + ".beskrivelse"));
+        this.setUnderBeskrivelse(Oversaetter.t("spilleplade.felt.faengsel." + feltType + ".underBeskrivelse"));
 
         this.setBaggrundsFarve(Color.BLACK);
         this.setForgrundsFarve(Color.WHITE);
@@ -43,7 +43,7 @@ public class Faengsel extends Felt {
     @Override
     public GUI_Jail getGUIFelt()
     {
-        return (GUI_Jail) this.guiField;
+        return (GUI_Jail) this.gui_felt;
     }
 
     /*Returnere hvis dette felt er til at besøge.*/
@@ -58,7 +58,7 @@ public class Faengsel extends Felt {
         if (this.erPaaBesoeg) {
             return;
         }
-        Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
+        Spiller spiller = spil.getSpiller().getNuvarendeSpiller();
         String output = "";
         String[] valg = {"Betal", "Fængselskort"};
         String faengselMulighed = spil.getGui().getUserSelection("Hvordan vil du ud af faengsel?", valg);

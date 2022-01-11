@@ -31,7 +31,7 @@ public class Chancekort {
     /*Metoden til at beslutte hvem den type chancekort skal gives til.*/
     public static Action handlingType(Spiller.Type type) {
         Action action = (Spil spil) -> {
-            Spiller spiller = spil.getPlayers().getSpillerVedType(type);
+            Spiller spiller = spil.getSpiller().getSpillerVedType(type);
 
             if (spiller == null) {
             } else {
@@ -61,7 +61,7 @@ public class Chancekort {
 
                     spil.rykSpiller(spiller, feltNavn);
 
-                    Ejendom felt = (Ejendom) spil.getBoard().getPlayerField(spiller); //Købe felter.
+                    Ejendom felt = (Ejendom) spil.getSpillerplade().getSpillerFelt(spiller); //Købe felter.
 
                     if (!felt.erEjet()) {
                     } else {
@@ -70,7 +70,7 @@ public class Chancekort {
                     felt.koebEjendom(spiller);
                 });
             }
-            spil.getChanceDeck().draw().play(spil);
+            spil.getChanceBunke().draw().play(spil);
         };
         return action;
     }
@@ -78,8 +78,8 @@ public class Chancekort {
 
     public static Action handlingTypeFelt(Color ...types) {
         return (Spil spil) -> {
-            Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
-            Ejendom[] felt = spil.getBoard().getFeltvedTypeFarve(types);
+            Spiller spiller = spil.getSpiller().getNuvarendeSpiller();
+            Ejendom[] felt = spil.getSpillerplade().getFeltvedTypeFarve(types);
 
             String[] feltNavne = new String[felt.length];
             for (int i = 0; i < felt.length; i++) {
@@ -88,10 +88,10 @@ public class Chancekort {
 
             String feltNavn = spil.getGui().getUserSelection(Oversaetter.t("chance.beskrivelse.ryk_til.action"), feltNavne);
             spil.rykSpiller(spiller, feltNavn);
-            Ejendom feltH = (Ejendom) spil.getBoard().getFeltVedNavn(feltNavn);
+            Ejendom feltH = (Ejendom) spil.getSpillerplade().getFeltVedNavn(feltNavn);
 
             if (feltH.erEjet()) {
-                feltH.betaltLeje(spil.getBoard(), spiller);
+                feltH.betaltLeje(spil.getSpillerplade(), spiller);
             } else {
                 feltH.setEjer(spiller);
             }
