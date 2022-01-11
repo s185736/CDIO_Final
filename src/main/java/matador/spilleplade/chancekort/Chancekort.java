@@ -4,7 +4,7 @@ import matador.spiller.Spiller;
 import matador.Oversaetter;
 import matador.spil.Spil;
 import matador.spilleplade.felter.Felt;
-import matador.spilleplade.genstand.Hus;
+import matador.spilleplade.felter.Ejendom;
 
 import java.awt.*;
 import java.util.Arrays;
@@ -37,13 +37,13 @@ public class Chancekort {
             } else {
                 spiller.setTurHandling(() -> {
                     LinkedList<Felt> felts = new LinkedList<>(Arrays.asList(spil.getFelter()));
-                    felts.removeIf(felt -> !(felt instanceof Hus)); //Anvendes kun til felt huse.
+                    felts.removeIf(felt -> !(felt instanceof Ejendom)); //Anvendes kun til felt huse.
                     LinkedList<Felt> feltAtBruge = new LinkedList<>();
                     
                     /*For loop til at tjekke om der er tilgængelige felter.*/
                     for (int i = 0, feltsSize = felts.size(); i < feltsSize; i++) {
                         Felt felt = felts.get(i);
-                        if (!((Hus) felt).erEjet()) {
+                        if (!((Ejendom) felt).erEjet()) {
                             continue;
                         }
                         feltAtBruge.add(felt);
@@ -61,7 +61,7 @@ public class Chancekort {
 
                     spil.rykSpiller(spiller, feltNavn);
 
-                    Hus felt = (Hus) spil.getBoard().getPlayerField(spiller); //Købe felter.
+                    Ejendom felt = (Ejendom) spil.getBoard().getPlayerField(spiller); //Købe felter.
 
                     if (!felt.erEjet()) {
                     } else {
@@ -79,7 +79,7 @@ public class Chancekort {
     public static Action handlingTypeFelt(Color ...types) {
         return (Spil spil) -> {
             Spiller spiller = spil.getPlayers().getNuvarendeSpiller();
-            Hus[] felt = spil.getBoard().getFeltvedTypeFarve(types);
+            Ejendom[] felt = spil.getBoard().getFeltvedTypeFarve(types);
 
             String[] feltNavne = new String[felt.length];
             for (int i = 0; i < felt.length; i++) {
@@ -88,7 +88,7 @@ public class Chancekort {
 
             String feltNavn = spil.getGui().getUserSelection(Oversaetter.t("chance.beskrivelse.ryk_til.action"), feltNavne);
             spil.rykSpiller(spiller, feltNavn);
-            Hus feltH = (Hus) spil.getBoard().getFeltVedNavn(feltNavn);
+            Ejendom feltH = (Ejendom) spil.getBoard().getFeltVedNavn(feltNavn);
 
             if (feltH.erEjet()) {
                 feltH.betaltLeje(spil.getBoard(), spiller);

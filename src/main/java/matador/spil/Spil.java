@@ -7,7 +7,7 @@ import matador.spiller.Spillerliste;
 import matador.spilleplade.chancekort.ChanceBunke;
 import matador.spilleplade.felter.Felt;
 import matador.spilleplade.Spilleplade;
-import matador.spilleplade.genstand.Hus;
+import matador.spilleplade.felter.Ejendom;
 import matador.spilleplade.felter.Faengsel;
 import matador.spilleplade.genstand.Terning;
 
@@ -28,9 +28,9 @@ public class Spil {
         this.spilleplade = new Spilleplade();
         this.gui = new GUI(this.spilleplade.getGUIFelt());
         this.terning = new Terning();
-        this.terning1 = new Terning();
         this.chanceBunke = new ChanceBunke();
         this.players = new Spillerliste();
+        this.terning1 = new Terning();
     }
 
     public GUI getGui()
@@ -159,9 +159,9 @@ public class Spil {
             for (int i = 0, winnersLength = vinder.length; i < winnersLength; i++) {
                 Spiller spiller = vinder[i];
                 int feltVaerdi = 0;
-                Hus[] feltEjetAfSpiller = this.spilleplade.getFieldsOwnedByPlayer(spiller);
+                Ejendom[] feltEjetAfSpiller = this.spilleplade.getFieldsOwnedByPlayer(spiller);
                 for (int j = 0, fieldsOwnedByPlayerLength = feltEjetAfSpiller.length; j < fieldsOwnedByPlayerLength; j++) {
-                    Hus felt = feltEjetAfSpiller[j];
+                    Ejendom felt = feltEjetAfSpiller[j];
                     feltVaerdi += felt.getLeje();
                 }
                 spiller.tilfoejBalance(feltVaerdi);
