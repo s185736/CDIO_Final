@@ -20,7 +20,7 @@ public class Spilleplade {
     /*Konstruktør af Spilleplade.*/
     public Spilleplade()
     {
-        this.felts = this.opretFelter();
+        this.felts = Felter.getFelter();
     }
 
     /*Få felterne af dette spileplade.*/
@@ -154,12 +154,13 @@ public class Spilleplade {
     }
 
     /*Alle felter for dette spilleplade.*/
+    /*
     private Felt[] opretFelter() {
         return new Felt[] {
-                /*Herunder skal felterne tilføjes.
+                Herunder skal felterne tilføjes.
                 * Det er kronologisk rækkefølge.
                 * HUSK BLOT AT FØLGE SAMME STRUKTUR
-                * ÆNDRING AF FELTER FOREGÅR BÅDE I Spillerplade.java samt dansk.txt*/
+                * ÆNDRING AF FELTER FOREGÅR BÅDE I Spillerplade.java samt dansk.txt
                 new Start().setFeltNavn("Start") .setUnderBeskrivelse("") .setBaggrundsFarve(Color.GREEN),
                 new Hus(Oversaetter.t("spilleplade.felt.roedovrevej.beskrivelse"), 1, Color.BLUE).setUnderBeskrivelse("kr. 1.200"),
                 new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?"),
@@ -201,5 +202,5 @@ public class Spilleplade {
                 new StatsSkat(true).setUnderBeskrivelse("Statsskat"),
                 new Hus(Oversaetter.t("spilleplade.felt.raadhuspladsen.beskrivelse"), 1, new Color(73, 18, 134)).setUnderBeskrivelse("kr. 8.000"),
         };
-    }
+    }*/
 }
