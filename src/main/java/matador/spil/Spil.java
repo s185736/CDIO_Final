@@ -118,14 +118,7 @@ public class Spil {
 
     /*Starter pakke til spillerne.*/
     private int getStarterPakke(int antalSpillere) {
-        if (antalSpillere == 2) {
-            return 20;
-        } else if (antalSpillere == 3) {
-            return 1;
-        } else if (antalSpillere == 4) {
-            return 16;
-        }
-        return 20;
+        return 30000;
     }
 
     /*Her bestemmer man hvem der skal starte.*/
@@ -137,6 +130,10 @@ public class Spil {
             case 3:  playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn(), "3. " + this.players.get(2).getNavn());
                 break;
             case 4:  playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn(), "3. " + this.players.get(2).getNavn(), "4. " + this.players.get(3).getNavn());
+                break;
+            case 5:  playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn(), "3. " + this.players.get(2).getNavn(), "4. " + this.players.get(3).getNavn(), "5. " + this.players.get(4).getNavn());
+                break;
+            case 6:  playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn(), "3. " + this.players.get(2).getNavn(), "4. " + this.players.get(3).getNavn(), "5. " + this.players.get(4).getNavn(), "4. " + this.players.get(5).getNavn());
                 break;
         }
         playerNumberString = playerNumberString.split("\\.", 2)[0];
