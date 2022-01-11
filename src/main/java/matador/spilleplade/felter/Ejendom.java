@@ -1,23 +1,21 @@
-package matador.spilleplade.genstand;
+package matador.spilleplade.felter;
 
 import gui_fields.GUI_Street;
 import matador.spil.Spil;
 import matador.spiller.Spiller;
 import matador.spilleplade.Spilleplade;
-import matador.spilleplade.felter.Felt;
 
 import java.awt.Color;
 
-public class Hus extends Felt {
+public class Ejendom extends Felt {
 
     private int leje; //leje for dette hus felt.
     private Spiller ejer; //ejeren af hus feltet.
     private Color farveType; //typen af feltet.
 
-
     /*Konstrutør af Hus med et given navn og leje. Og opretter den standarde
     * beskrivelse samt under beskrivelse.*/
-    public Hus(String feltNavn, int leje, Color farveType) {
+    public Ejendom(String feltNavn, int leje, Color farveType) {
         super(feltNavn);
         this.setBeskrivelse("");
         this.setUnderBeskrivelse("");
@@ -27,7 +25,6 @@ public class Hus extends Felt {
         this.farveType = farveType;
         this.getGUIFelt().setRent("M" + this.leje);
     }
-
 
     /*{@inheritDoc}*/
     @Override
@@ -63,8 +60,8 @@ public class Hus extends Felt {
 
     /*Betal dette leje af Huset for en spiller.*/
     public void betaltLeje(Spilleplade spilleplade, Spiller spiller) {
-        Hus[] felter = spilleplade.getFeltvedTypeFarve(this.farveType);
-        for (Hus feltH : felter) {
+        Ejendom[] felter = spilleplade.getFeltvedTypeFarve(this.farveType);
+        for (Ejendom feltH : felter) {
             if (feltH.erEjetAfSpiller(this.ejer)) {
                 spiller.tilfoejBalance(-this.getLeje());
                 this.ejer.tilfoejBalance(this.getLeje());
@@ -73,8 +70,8 @@ public class Hus extends Felt {
     }
 
     public void betalLejeInt(Spilleplade spilleplade, Spiller spiller) {
-        Hus[] felter = spilleplade.getFeltvedTypeFarve(this.farveType);
-        for (Hus felt : felter) {
+        Ejendom[] felter = spilleplade.getFeltvedTypeFarve(this.farveType);
+        for (Ejendom felt : felter) {
             if (felt.erEjetAfSpiller(this.ejer)) {
                 spiller.tilfoejBalance(-this.getLeje());
                 this.ejer.tilfoejBalance(this.getLeje());
