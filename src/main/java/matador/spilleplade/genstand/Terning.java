@@ -6,7 +6,7 @@ public class Terning {
     private int faceValue; //den nuværende værdi af terningen.
     public Terning()
     {
-        this(12);
+        this(6);
     } //Konstruktør, af en terning med 6 sider.
 
     /*Konstruktør af en terning med ethvert nummer af sider.*/
