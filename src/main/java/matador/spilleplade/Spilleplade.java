@@ -71,6 +71,7 @@ public class Spilleplade {
         return felter.toArray(new Hus[] {});
     }
 
+
     /*Få husfelter i en array som er ejet af en spiller.*/
     public Hus[] getFieldsOwnedByPlayer(Spiller spiller) {
         LinkedList<Hus> felter = new LinkedList<>();

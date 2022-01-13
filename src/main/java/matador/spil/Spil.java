@@ -2,6 +2,7 @@ package matador.spil;
 
 import gui_main.GUI;
 import matador.*;
+import matador.spilleplade.felter.Timer;
 import matador.spiller.Spiller;
 import matador.spiller.Spillerliste;
 import matador.spilleplade.chancekort.ChanceBunke;
@@ -22,6 +23,7 @@ public class Spil {
     private Terning terning1;
     private ChanceBunke chanceBunke;
     private Spillerliste players;
+    public int turn;
 
     /*Konstruktør*/
     public Spil() {
@@ -114,6 +116,8 @@ public class Spil {
             this.players.tilfoejSpiller(spiller);
             i++;
         }
+        Timer m =new Timer();
+        m.m();
     }
 
     /*Starter pakke til spillerne.*/
@@ -209,11 +213,15 @@ public class Spil {
         this.gui.showMessage(falitSpiller.getNavn() + Oversaetter.t("slut.matador.fallit"));
         this.visVinderMatador();
         this.gui.showMessage("Venligst klik på 'OK' for at afslutte spillet.");
+
         System.exit(0);
     }
 
 
+
+
     public void spilMatadorRunde(Spiller nuvaerendeSpiller) {
+
         switch (this.gui.getUserButtonPressed(Oversaetter.t("kast.terning") + " " + nuvaerendeSpiller.getNavn() + Oversaetter.t("kast.terning1"), "Kast")) {
         }
         this.terning.kast();
@@ -224,4 +232,12 @@ public class Spil {
         Felt felt = this.spilleplade.getPlayerField(nuvaerendeSpiller);
         felt.koerHandling(this);
     }
+
+
+
+
+
+
+
+
 }

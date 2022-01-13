@@ -10,6 +10,8 @@ public class Spiller {
     private LagerStash lagerStash;
     private Type type = Type.BIL1;
     private int faengselsKort;
+    private int houses;
+    private int hotels;
 
     /*Dette er handlingen til at køre for spillerens næste tur.*/
     private TurHandlinger turHandling;
@@ -136,4 +138,29 @@ public class Spiller {
         return spiller.getBalance() < 0;
     }
 
+
+    public int getHouses() {
+        return houses;
+    }
+
+
+    public void setHouses(int houses) {
+        this.houses = houses;
+    }
+
+    /**
+     * get Hotels
+     * @return The amount of hotels the player own across the board
+     */
+    public int getHotels() {
+        return hotels;
+    }
+
+    /**
+     * set Hotels
+     * @param hotels Set the total amount of hotels the player owns
+     */
+    public void setHotels(int hotels) {
+        this.hotels = hotels;
+    }
 }
