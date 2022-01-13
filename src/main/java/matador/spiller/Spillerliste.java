@@ -38,9 +38,9 @@ public class Spillerliste extends LinkedList<Spiller> {
     }
 
     /*Få en spiller i spillelisten ved dens spiller type.*/
-    public Spiller getSpillerVedType(Spiller.Type type) {
+    public Spiller getSpillerVedType(Spiller.SpillerBrik spillerBrik) {
         return this.stream()
-                .filter(player -> player.getType() == type)
+                .filter(player -> player.getType() == spillerBrik)
                 .findFirst()
                 .orElse(null);
     }

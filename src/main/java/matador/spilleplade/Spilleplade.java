@@ -47,8 +47,8 @@ public class Spilleplade {
         for (int i = 0, husFeltLength = ejendomFelt.length; i < husFeltLength; i++) {
             Ejendom feltH = ejendomFelt[i];
             for (int j = 0; j < types.length; j++) {
-                Color type = types[j];
-                if (feltH.getFarveType() != type) {
+                Color spillerBrik = types[j];
+                if (feltH.getFarveType() != spillerBrik) {
                     continue;
                 }
                 felter.add(feltH);

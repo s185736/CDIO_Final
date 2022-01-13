@@ -7,7 +7,7 @@ kast.terning1: 's tur. Kast med terningerne
 kast.terning2: kastede
 kast.terning3: har passeret start feltet og får 2M
 
-type.hvemerhvem: Hvilken spiller er du?
+spillerBrik.hvemerhvem: Hvilken spiller er du?
 getmoney.spiller: har nu passeret start feltet og får 2M
 
 spilleplade.felt.roedovrevej.beskrivelse:Rødovrevej
@@ -175,14 +175,14 @@ spilleplade.felt.faengsel.free.card:Du er så dygigt og klog, at du anvender dit
 spilleplade.felt.faengsel.free.card.num: Du har nu
 spilleplade.felt.faengsel.free.card.num2: frikort tilbage.
 
-chance.beskrivelse.type.BIL3:Giv dette kort til BIL3, og træk endnu et chancekort. \n BIL1: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
-chance.beskrivelse.type.BIL4:Giv dette kort til BIL4, og træk endnu et chancekort. \n BIL2: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
-chance.beskrivelse.type.BIL1:Giv dette kort til BIL1, og træk endnu et chancekort. \n BIL3: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
-chance.beskrivelse.type.BIL2:Giv dette kort til BIL2, og træk endnu et chancekort. \n BIL4: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
-chance.beskrivelse.type.BIL5:Giv dette kort til BIL5, og træk endnu et chancekort. \n BIL5: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
-chance.beskrivelse.type.BIL6:Giv dette kort til BIL6, og træk endnu et chancekort. \n BIL6: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
+chance.beskrivelse.spillerBrik.BIL3:Giv dette kort til BIL3, og træk endnu et chancekort. \n BIL1: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
+chance.beskrivelse.spillerBrik.BIL4:Giv dette kort til BIL4, og træk endnu et chancekort. \n BIL2: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
+chance.beskrivelse.spillerBrik.BIL1:Giv dette kort til BIL1, og træk endnu et chancekort. \n BIL3: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
+chance.beskrivelse.spillerBrik.BIL2:Giv dette kort til BIL2, og træk endnu et chancekort. \n BIL4: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
+chance.beskrivelse.spillerBrik.BIL5:Giv dette kort til BIL5, og træk endnu et chancekort. \n BIL5: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
+chance.beskrivelse.spillerBrik.BIL6:Giv dette kort til BIL6, og træk endnu et chancekort. \n BIL6: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
 
-chance.beskrivelse.type.action:Vælg venligst et felt som du vil rykke til.
+chance.beskrivelse.spillerBrik.action:Vælg venligst et felt som du vil rykke til.
 chance.beskrivelse.to_start:Ryk frem til START feltet. Modtag 2M.
 chance.beskrivelse.move_5_fields:Ryk op til 5 felter frem.
 chance.beskrivelse.move_5_fields.question:Hvor mange felter vil du gerne rykke frem?

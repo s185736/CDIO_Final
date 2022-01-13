@@ -37,7 +37,7 @@ public abstract class Felt {
     /*Opretter den korrekte GUI_field. Denne metode er kaldet i konstruktøren og skal returnere den korrekte GUI_field.*/
     abstract protected GUI_Field opretGUIFelt();
 
-    /*Dette skal returnere GUI_field med den korrekte type.*/
+    /*Dette skal returnere GUI_field med den korrekte spillerBrik.*/
     abstract public GUI_Field getGUIFelt();
 
     public abstract void koerHandling(Spil spil);

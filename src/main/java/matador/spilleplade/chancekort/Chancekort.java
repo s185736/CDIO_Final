@@ -29,9 +29,9 @@ public class Chancekort {
     }
 
     /*Metoden til at beslutte hvem den type chancekort skal gives til.*/
-    public static Action handlingType(Spiller.Type type) {
+    public static Action handlingType(Spiller.SpillerBrik spillerBrik) {
         Action action = (Spil spil) -> {
-            Spiller spiller = spil.getSpiller().getSpillerVedType(type);
+            Spiller spiller = spil.getSpiller().getSpillerVedType(spillerBrik);
 
             if (spiller == null) {
             } else {

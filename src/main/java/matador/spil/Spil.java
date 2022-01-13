@@ -96,7 +96,7 @@ public class Spil {
 
     private void opretSpillere(int antalSpillere) {
         LinkedList<String> types;
-        types = new LinkedList<>(Arrays.asList(Spiller.Type.valuesToString()));
+        types = new LinkedList<>(Arrays.asList(Spiller.SpillerBrik.valuesToString()));
         //ArrayList<String> types;
         //types = new ArrayList<>(Arrays.asList(Spiller.Type.valuesToString()));
 
@@ -107,7 +107,7 @@ public class Spil {
 
             types.remove(type);
             Spiller spiller = new Spiller(navn, this.getStarterPakke(antalSpillere));
-            spiller.setType(Spiller.Type.konvEnum(type));
+            spiller.setType(Spiller.SpillerBrik.konvEnum(type));
 
             this.gui.addPlayer(spiller.getSpiller());
             this.spilleplade.addPlayer(spiller);

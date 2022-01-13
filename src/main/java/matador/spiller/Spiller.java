@@ -8,14 +8,14 @@ public class Spiller {
     private GUI_Player spiller;
     private String navn;
     private LagerStash lagerStash;
-    private Type type = Type.BIL1;
+    private SpillerBrik spillerBrik = SpillerBrik.BIL1;
     private int faengselsKort;
 
     /*Dette er handlingen til at køre for spillerens næste tur.*/
     private TurHandlinger turHandling;
 
     /*Enum til at bestemme typen af spiller.*/
-    public enum Type {
+    public enum SpillerBrik {
         BIL1,
         BIL2,
         BIL3,
@@ -24,16 +24,16 @@ public class Spiller {
         BIL6;
 
     /*Konverterer en string til den korresponderet type.*/
-    public static Type konvEnum(String navn) throws IllegalArgumentException {
-        return Type.valueOf(navn.toUpperCase());
+    public static SpillerBrik konvEnum(String navn) throws IllegalArgumentException {
+        return SpillerBrik.valueOf(navn.toUpperCase());
     }
 
     /*Henter alle typer som strings.*/
     public static String[] valuesToString() {
-        Type[] types = Type.values();
-        String[] typesString = new String[types.length];
-        for (int i = 0; i < types.length; i++) {
-            typesString[i] = types[i].toString();
+        SpillerBrik[] spillerBriks = SpillerBrik.values();
+        String[] typesString = new String[spillerBriks.length];
+        for (int i = 0; i < spillerBriks.length; i++) {
+            typesString[i] = spillerBriks[i].toString();
         }
         return typesString;
       }
@@ -93,15 +93,15 @@ public class Spiller {
     }
 
     /*Ændring af type af spiller der skal være.*/
-    public void setType(Type type)
+    public void setType(SpillerBrik spillerBrik)
     {
-        this.type = type;
+        this.spillerBrik = spillerBrik;
     }
 
     /*Henter dette spiller type.*/
-    public Type getType()
+    public SpillerBrik getType()
     {
-        return this.type;
+        return this.spillerBrik;
     }
 
     /*Grænseflade for spiller runnable handlinger istedet for normal tur.*/
