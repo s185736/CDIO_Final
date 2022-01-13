@@ -16,7 +16,7 @@ spilleplade.felt.roedovrevej.underBeskrivelse:'Rødovrevej'
 spilleplade.felt.hvidovrevej.beskrivelse:Hvidovrevej
 spilleplade.felt.hvidovrevej.underBeskrivelse:'Hvidovrevej'
 
-spilleplade.felt.statsskat.feltnavn:IndkomstSkat
+spilleplade.felt.indkomstskat.feltnavn:IndkomstSkat
 spilleplade.felt.indkomstskat.beskrivelse:Indkomstskat
 spilleplade.felt.indkomstskat.underBeskrivelse:'Indkomstskat'
 spilleplade.felt.indkomstskat.pay1:Du betaler 4.000,- til Indkomstskat.
