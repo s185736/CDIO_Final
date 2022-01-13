@@ -1,6 +1,5 @@
 package matador.spilleplade.felter;
 
-import gui_fields.GUI_Refuge;
 import gui_fields.GUI_Street;
 import matador.spil.Spil;
 import matador.Oversaetter;
@@ -22,16 +21,16 @@ public class Parkering extends Felt {
 
     /*{@inheritDoc}*/
     @Override
-    protected GUI_Refuge opretGUIFelt()
+    protected GUI_Street opretGUIFelt()
     {
-        return new GUI_Refuge();
+        return new GUI_Street();
     }
 
     /*{@inheritDoc}*/
     @Override
-    public GUI_Refuge getGUIFelt()
+    public GUI_Street getGUIFelt()
     {
-        return (GUI_Refuge) this.gui_felt;
+        return (GUI_Street) this.gui_felt;
     }
 
     @Override
