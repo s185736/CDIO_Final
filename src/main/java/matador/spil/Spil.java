@@ -63,7 +63,7 @@ public class Spil {
         Felt nuvaerendeFelt = this.spilleplade.getSpillerFelt(spiller);
         this.spilleplade.rykSpiller(spiller, rykAntalFelter);
         if (this.spilleretPasseretStartFelt(spiller, nuvaerendeFelt)) {
-            spiller.tilfoejBalance(2);
+            spiller.tilfoejBalance(4000);
             this.gui.showMessage(spiller.getNavn() + Oversaetter.t("kast.terning3"));
         } else {
             return;
@@ -82,7 +82,7 @@ public class Spil {
         if (!this.spilleretPasseretStartFelt(spiller, nuvaerendeFelt)) {
             return;
         }
-        spiller.tilfoejBalance(2);
+        spiller.tilfoejBalance(4000);
         this.gui.showMessage(spiller.getNavn() + Oversaetter.t("kast.terning3"));
     }
 
@@ -209,7 +209,33 @@ public class Spil {
 
 
     public void spilMatadorRunde(Spiller nuvaerendeSpiller) {
-        switch (this.gui.getUserButtonPressed(Oversaetter.t("kast.terning") + " " + nuvaerendeSpiller.getNavn() + Oversaetter.t("kast.terning1"), "Kast")) {
+        for (int i = 0; i < 3;){
+            switch (this.gui.getUserButtonPressed(Oversaetter.t("kast.terning") + " " + nuvaerendeSpiller.getNavn() + Oversaetter.t("kast.terning1"), "Kast")) {
+            }
+            this.terning.kast();
+            this.terning1.kast();
+            int faceValue1 = this.terning.getFaceValue();
+            int faceValue2 = this.terning1.getFaceValue();
+            int rykDistance = faceValue1 + faceValue2;
+            this.gui.setDice(faceValue1, faceValue2);
+            this.gui.showMessage(new StringBuilder().append(nuvaerendeSpiller.getNavn()).append(Oversaetter.t("kast.terning2")).append(" ").append(rykDistance).toString());
+            this.rykSpiller(nuvaerendeSpiller, rykDistance);
+            Felt felt = this.spilleplade.getSpillerFelt(nuvaerendeSpiller);
+            felt.koerHandling(this);
+            if (faceValue1 == faceValue2){
+                i++;
+                gui.showMessage("Du har slået 2 ens, dermed får du en ekstra tur!");
+                if (i == 3){
+                    //Funktioner der skal laves hvor spilleren bliver sat i fængsel
+                    gui.showMessage("Du har slået 2 ens 3 gange i streg, du ryger direkte i fængsel");
+                }
+            }
+            else{
+                i = 3;
+            }
+        }
+
+        /*switch (this.gui.getUserButtonPressed(Oversaetter.t("kast.terning") + " " + nuvaerendeSpiller.getNavn() + Oversaetter.t("kast.terning1"), "Kast")) {
         }
         this.terning.kast();
         this.terning1.kast();
@@ -220,6 +246,6 @@ public class Spil {
         this.gui.showMessage(new StringBuilder().append(nuvaerendeSpiller.getNavn()).append(Oversaetter.t("kast.terning2")).append(" ").append(rykDistance).toString());
         this.rykSpiller(nuvaerendeSpiller, rykDistance);
         Felt felt = this.spilleplade.getSpillerFelt(nuvaerendeSpiller);
-        felt.koerHandling(this);
+        felt.koerHandling(this);*/
     }
 }
