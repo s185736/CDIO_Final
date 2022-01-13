@@ -18,8 +18,6 @@ spilleplade.felt.hvidovrevej.underBeskrivelse:'Hvidovrevej'
 
 spilleplade.felt.indkomstskat.beskrivelse:Indkomstskat
 spilleplade.felt.indkomstskat.underBeskrivelse:'Indkomstskat'
-spilleplade.felt.indkomstskat.pay1:Du betaler 4.000,- til Indkomstskat.
-spilleplade.felt.indkomstskat.pay2:Du betaler 10% af dine værdier til Indkomstskat.
 
 spilleplade.felt.scandlines1.beskrivelse:Scandlines Gedser-Rostock
 spilleplade.felt.scandlines1.underBeskrivelse:'Scandlines Gedser-Rostock'
