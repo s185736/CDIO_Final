@@ -1,6 +1,7 @@
 velkommen1.getAntalSpillere:Hvor mange skal I spille?
 velkommen2.getSpillerNavn:Indtast venligst navne på spillerne:
 velkommen3.getHvemSkalStarte:Hvem skal starte?
+type.hvemerhvem:Vælg venligst din Bil.
 
 kast.terning:Det er
 kast.terning1: 's tur. Kast med terningerne
