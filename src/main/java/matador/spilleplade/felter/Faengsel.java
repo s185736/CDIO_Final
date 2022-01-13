@@ -30,14 +30,12 @@ public class Faengsel extends Felt {
         this.setForgrundsFarve(Color.WHITE);
     }
 
-
     /*{@inheritDoc}*/
     @Override
     protected GUI_Jail opretGUIFelt()
     {
         return new GUI_Jail();
     }
-
 
     /*{@inheritDoc}*/
     @Override
