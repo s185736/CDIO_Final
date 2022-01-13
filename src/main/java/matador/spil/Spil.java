@@ -63,7 +63,7 @@ public class Spil {
         Felt nuvaerendeFelt = this.spilleplade.getPlayerField(spiller);
         this.spilleplade.movePlayer(spiller, rykAntalFelter);
         if (this.spilleretPasseretStartFelt(spiller, nuvaerendeFelt)) {
-            spiller.tilfoejBalance(2);
+            spiller.tilfoejBalance(4000);
             this.gui.showMessage(spiller.getNavn() + Oversaetter.t("kast.terning3"));
         } else {
             return;
@@ -212,7 +212,34 @@ public class Spil {
 
 
     public void spilMatadorRunde(Spiller nuvaerendeSpiller) {
-        switch (this.gui.getUserButtonPressed(Oversaetter.t("kast.terning") + " " + nuvaerendeSpiller.getNavn() + Oversaetter.t("kast.terning1"), "Kast")) {
+        for (int i = 0; i < 3;i++){
+            switch (this.gui.getUserButtonPressed(Oversaetter.t("kast.terning") + " " + nuvaerendeSpiller.getNavn() + Oversaetter.t("kast.terning1"), "Kast")) {
+            }
+            this.terning.kast();
+            this.terning1.kast();
+            int faceValue1 = this.terning.getFaceValue();
+            int faceValue2 = this.terning1.getFaceValue();
+            int rykDistance = faceValue1 + faceValue2;
+            this.gui.setDice(faceValue1, faceValue2);
+            this.gui.showMessage(new StringBuilder().append(nuvaerendeSpiller.getNavn()).append(Oversaetter.t("kast.terning2")).append(" ").append(rykDistance).toString());
+            this.rykSpiller(nuvaerendeSpiller, rykDistance);
+            Felt felt = this.spilleplade.getPlayerField(nuvaerendeSpiller);
+            felt.koerHandling(this);
+            //Er terningnerne ens, så får spilleren en ekstra tur.
+            if (faceValue1 == faceValue2){
+                i++;
+                //Tjekker om det 3. kast i streg der er ens.
+                if (i == 3){
+                    //this.spilleplade.
+                    //this.r
+                    this.rykSpiller(nuvaerendeSpiller, "Faengsel");
+                }
+            }
+            else{
+                i = 3;
+            }
+        }
+        /*switch (this.gui.getUserButtonPressed(Oversaetter.t("kast.terning") + " " + nuvaerendeSpiller.getNavn() + Oversaetter.t("kast.terning1"), "Kast")) {
         }
         this.terning.kast();
         int faceValue = this.terning.getFaceValue();
@@ -221,5 +248,16 @@ public class Spil {
         this.rykSpiller(nuvaerendeSpiller, faceValue);
         Felt felt = this.spilleplade.getPlayerField(nuvaerendeSpiller);
         felt.koerHandling(this);
+
+        this.terning1.kast();
+        int faceValue1 = this.terning.getFaceValue();
+        int faceValue2 = this.terning1.getFaceValue();
+        int rykDistance = faceValue1 + faceValue2;
+        this.gui.setDice(faceValue1, faceValue2);
+        this.gui.showMessage(new StringBuilder().append(nuvaerendeSpiller.getNavn()).append(Oversaetter.t("kast.terning2")).append(" ").append(rykDistance).toString());
+        this.rykSpiller(nuvaerendeSpiller, rykDistance);
+        Felt felt = this.spilleplade.getSpillerFelt(nuvaerendeSpiller);
+        felt.koerHandling(this);*/
+
     }
 }
