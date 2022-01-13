@@ -9,18 +9,20 @@ import java.awt.Color;
 
 public class Ejendom extends Felt {
 
+    private int pris; //pris for hus felt.
     private int leje; //leje for dette hus felt.
     private Spiller ejer; //ejeren af hus feltet.
     private Color farveType; //typen af feltet.
 
     /*Konstrutør af Hus med et given navn og leje. Og opretter den standarde
     * beskrivelse samt under beskrivelse.*/
-    public Ejendom(String feltNavn, int leje, Color farveType) {
+    public Ejendom(String feltNavn, int pris, int leje, Color farveType) {
         super(feltNavn);
         this.setBeskrivelse("");
         this.setUnderBeskrivelse("");
         this.setBaggrundsFarve(farveType);
         this.setForgrundsFarve(Color.BLACK);
+        this.pris = pris;
         this.leje = leje;
         this.farveType = farveType;
         this.getGUIFelt().setRent("M" + this.leje);
@@ -46,6 +48,11 @@ public class Ejendom extends Felt {
         return this.farveType;
     }
 
+    /*Ejendomspris, prisen for et hus*/
+    public int getPris(){
+        return this.pris;
+    }
+
     /*Huslejen, lejen af dette Hus.*/
     public int getLeje()
     {
@@ -55,7 +62,7 @@ public class Ejendom extends Felt {
     /*Køb dette Hus for en spiller...*/
     public void koebEjendom(Spiller spiller) {
         this.setEjer(spiller);
-        spiller.tilfoejBalance(-this.getLeje());
+        spiller.tilfoejBalance(-this.getPris());
     }
 
     /*Betal dette leje af Huset for en spiller.*/
@@ -115,7 +122,7 @@ public class Ejendom extends Felt {
             spil.getGui().showMessage("Feltet tilhører " + this.ejer.getNavn() + ", af denne grund tjener ejeren " + this.getLeje() + "M af " + spiller.getNavn()+".");
         } else {
             this.koebEjendom(spiller);
-            spil.getGui().showMessage("Feltet har ingen ejer, " + spiller.getNavn() + " køber feltet for " + this.getLeje() + "M.");
+            spil.getGui().showMessage("Feltet har ingen ejer, " + spiller.getNavn() + " køber feltet for " + this.getPris() + "M.");
         }
     }
 }
