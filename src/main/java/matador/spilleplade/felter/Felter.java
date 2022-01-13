@@ -50,7 +50,7 @@ public class Felter {
         nyFelt[35] = new Rederi(Oversaetter.t("spilleplade.felt.scandlines3.beskrivelse"), 1200, 600, Color.white).setUnderBeskrivelse("Scandlines");
         nyFelt[36] = new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?");
         nyFelt[37] = new Ejendom(Oversaetter.t("spilleplade.felt.frederiksgade.beskrivelse"), 7000, 3500, new Color(73, 18, 134)).setUnderBeskrivelse("kr. 7.000");
-        nyFelt[38] = new StatsSkat(true).setUnderBeskrivelse("Statsskat");
+        nyFelt[38] = new StatsSkat().setUnderBeskrivelse("Statsskat");
         nyFelt[39] = new Ejendom(Oversaetter.t("spilleplade.felt.raadhuspladsen.beskrivelse"), 8000, 4000, new Color(73, 18, 134)).setUnderBeskrivelse("kr. 8.000");
 
         return nyFelt;
