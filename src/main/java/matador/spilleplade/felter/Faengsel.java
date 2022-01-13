@@ -63,7 +63,7 @@ public class Faengsel extends Felt {
 
         // if statement for drop ned menu over muligheder for at komme ud af fængsel
         if ( faengselMulighed.equals("Betal") ) {
-            spiller.tilfoejBalance(-2);
+            spiller.tilfoejBalance(-1000);
             spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.action"));
             spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
             spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.pay"));
