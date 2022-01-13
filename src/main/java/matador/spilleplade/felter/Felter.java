@@ -17,7 +17,7 @@ public class Felter {
         nyFelt[2] = new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?");
         nyFelt[3] = new Ejendom(Oversaetter.t("spilleplade.felt.hvidovrevej.beskrivelse"), 1200, 600, Color.blue).setUnderBeskrivelse("kr. 1.200");
         nyFelt[4] = new IndkomstSkat(true).setUnderBeskrivelse("IndkomstSkat");
-        nyFelt[5] = new Rederi(true).setUnderBeskrivelse("Scandlines");
+        nyFelt[5] = new Rederi(Oversaetter.t("spilleplade.felt.scandlines1.beskrivelse"), 1200, 600, Color.white).setUnderBeskrivelse("Scandlines");
         nyFelt[6] = new Ejendom(Oversaetter.t("spilleplade.felt.roskildevej.beskrivelse"), 2000, 1000, Color.ORANGE).setUnderBeskrivelse("kr. 2.000");
         nyFelt[7] = new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?");
         nyFelt[8] = new Ejendom(Oversaetter.t("spilleplade.felt.valbylanggade.beskrivelse"), 2000, 1000, Color.ORANGE).setUnderBeskrivelse("kr. 2.000");
@@ -27,7 +27,7 @@ public class Felter {
         nyFelt[12] = new Ejendom(Oversaetter.t("spilleplade.felt.tuborgsquash.beskrivelse"), 3000, 1500, Color.red).setUnderBeskrivelse("kr. 3.000");
         nyFelt[13] = new Ejendom(Oversaetter.t("spilleplade.felt.bulowsvej.beskrivelse"), 2800, 1400, Color.yellow).setUnderBeskrivelse("kr. 2.800");
         nyFelt[14] = new Ejendom(Oversaetter.t("spilleplade.felt.glkongevej.beskrivelse"), 3200, 1600, Color.yellow).setUnderBeskrivelse("kr. 3.200");
-        nyFelt[15] = new Rederi(true).setUnderBeskrivelse("Scandlines");
+        nyFelt[15] = new Rederi(Oversaetter.t("spilleplade.felt.molslinien.beskrivelse"), 1200, 600, Color.white).setUnderBeskrivelse("Mols-Linien");
         nyFelt[16] = new Ejendom(Oversaetter.t("spilleplade.felt.bernstorffsvej.beskrivelse"), 3600, 1800, Color.GRAY).setUnderBeskrivelse("kr. 3.600");
         nyFelt[17] = new Chancekort().setFeltNavn("Chance").setUnderBeskrivelse("?");
         nyFelt[18] = new Ejendom(Oversaetter.t("spilleplade.felt.hellerupsvej.beskrivelse"), 3600, 1800, Color.GRAY).setUnderBeskrivelse("kr. 3.600");
@@ -37,7 +37,7 @@ public class Felter {
         nyFelt[22] = new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?");
         nyFelt[23] = new Ejendom(Oversaetter.t("spilleplade.felt.osterbrogade.beskrivelse"), 4400, 2200, Color.RED).setUnderBeskrivelse("kr. 4.400");
         nyFelt[24] = new Ejendom(Oversaetter.t("spilleplade.felt.gronningen.beskrivelse"), 4800, 2400, Color.RED).setUnderBeskrivelse("kr. 4.800");
-        nyFelt[25] = new Rederi(true).setUnderBeskrivelse("Scandlines");
+        nyFelt[25] = new Rederi(Oversaetter.t("spilleplade.felt.scandlines2.beskrivelse"), 1200, 600, Color.white).setUnderBeskrivelse("Scandlines");
         nyFelt[26] = new Ejendom(Oversaetter.t("spilleplade.felt.bredgade.beskrivelse"), 5200, 2600, Color.WHITE).setUnderBeskrivelse("kr. 5.200");
         nyFelt[27] = new Ejendom(Oversaetter.t("spilleplade.felt.kgsnytorv.beskrivelse"), 5200, 2600, Color.WHITE).setUnderBeskrivelse("kr. 5.200");
         nyFelt[28] = new Ejendom(Oversaetter.t("spilleplade.felt.cocacola.beskrivelse"), 3000, 1500, Color.red).setUnderBeskrivelse("kr. 3.000");
@@ -47,7 +47,7 @@ public class Felter {
         nyFelt[32] = new Ejendom(Oversaetter.t("spilleplade.felt.vimmelskaftet.beskrivelse"), 6000, 3000, Color.YELLOW).setUnderBeskrivelse("kr. 6.000");
         nyFelt[33] = new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?");
         nyFelt[34] = new Ejendom(Oversaetter.t("spilleplade.felt.nygade.beskrivelse"), 6400, 3200, Color.YELLOW).setUnderBeskrivelse("kr. 6.400");
-        nyFelt[35] = new Rederi(true).setUnderBeskrivelse("Scandlines");
+        nyFelt[35] = new Rederi(Oversaetter.t("spilleplade.felt.scandlines3.beskrivelse"), 1200, 600, Color.white).setUnderBeskrivelse("Scandlines");
         nyFelt[36] = new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?");
         nyFelt[37] = new Ejendom(Oversaetter.t("spilleplade.felt.frederiksgade.beskrivelse"), 7000, 3500, new Color(73, 18, 134)).setUnderBeskrivelse("kr. 7.000");
         nyFelt[38] = new StatsSkat(true).setUnderBeskrivelse("Statsskat");
