@@ -86,6 +86,21 @@ public class Spil {
         this.gui.showMessage(spiller.getNavn() + Oversaetter.t("kast.terning3"));
     }
 
+    /*Rykker spiller til et bestemt felt.*/
+    /*
+    public void rykSpillerPosition(Spiller spiller, int feltPosition) {
+        Felt nuvaerendeFelt = this.spilleplade.getSpillerFelt(spiller);
+        Felt rykTilFelt = this.spilleplade.getFelter()[feltPosition];
+        if (!this.spilleretPasseretStartFelt(spiller, nuvaerendeFelt)) {
+            return;
+        }
+        spiller.tilfoejBalance(4000);
+        this.gui.showMessage(spiller.getNavn() + Oversaetter.t("kast.terning3"));
+    }
+     */
+
+
+
     /*Valg af antal spillere.
     * Dette vil vise et gui-dropdown menu som giver muligheden til spillerene at vælge hvor mange de vil spille spillet.*/
     private int valgAfAntalSpillere(){
@@ -227,6 +242,7 @@ public class Spil {
                 gui.showMessage("Du har slået 2 ens, dermed får du en ekstra tur!");
                 if (i == 3){
                     //Funktioner der skal laves hvor spilleren bliver sat i fængsel
+                    this.spilleplade.rykSpiller(nuvaerendeSpiller, this.getFelter()[30]);
                     gui.showMessage("Du har slået 2 ens 3 gange i streg, du ryger direkte i fængsel");
                 }
             }

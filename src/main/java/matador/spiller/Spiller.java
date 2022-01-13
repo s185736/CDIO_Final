@@ -10,6 +10,7 @@ public class Spiller {
     private LagerStash lagerStash;
     private SpillerBrik spillerBrik = SpillerBrik.BIL1;
     private int faengselsKort;
+    private int position;
 
     /*Dette er handlingen til at køre for spillerens næste tur.*/
     private TurHandlinger turHandling;
@@ -63,6 +64,11 @@ public class Spiller {
     public int getBalance()
     {
         return this.lagerStash.getMaengdeBeloeb();
+    }
+
+    //Sætter position for spiller
+    public void setPosition(int position) {
+        this.position = position;
     }
 
     /*Tilføjer balance spiller.*/

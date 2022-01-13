@@ -129,6 +129,18 @@ public class Spilleplade {
         feltAtRykke.setBil(spiller);
     }
 
+
+    /*Rykker spiller til et bestemt felt.*/
+    /*
+    public void rykSpillerPosition(Spiller spiller, int feltPosition) {
+        Felt nuvaerendeFelt = this.spillerFeltMap.get(spiller);
+        Felt rykTilFelt = this.spillerFeltMap.replace(spiller, getFelter()[feltPosition]);
+        nuvaerendeFelt.fjernBil(spiller);
+        rykTilFelt.setBil(spiller);
+    }
+    */
+
+
     /*Få felt som en spiller er placeret på.*/
     public Felt getSpillerFelt(Spiller spiller)
     {
