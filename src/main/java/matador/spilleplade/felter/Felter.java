@@ -16,8 +16,7 @@ public class Felter {
         nyFelt[1] = new Ejendom(Oversaetter.t("spilleplade.felt.roedovrevej.beskrivelse"), 1200, 600, Color.BLUE).setUnderBeskrivelse("kr. 1.200");
         nyFelt[2] = new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("Prøv-Lykken");
         nyFelt[3] = new Ejendom(Oversaetter.t("spilleplade.felt.hvidovrevej.beskrivelse"), 1200, 600, Color.blue).setUnderBeskrivelse("kr. 1.200");
-        //nyFelt[4] = new IndkomstSkat(true).setUnderBeskrivelse("IndkomstSkat");
-        nyFelt[4] = new IndkomstSkat(Oversaetter.t("spilleplade.felt.indkomstskat.beskrivelse")).setUnderBeskrivelse("kr. ???");
+        nyFelt[4] = new IndkomstSkat(true).setUnderBeskrivelse("IndkomstSkat");
         nyFelt[5] = new Rederi(Oversaetter.t("spilleplade.felt.scandlines1.beskrivelse"), 1200, 600, Color.white).setUnderBeskrivelse("Scandlines");
         nyFelt[6] = new Ejendom(Oversaetter.t("spilleplade.felt.roskildevej.beskrivelse"), 2000, 1000, Color.ORANGE).setUnderBeskrivelse("kr. 2.000");
         nyFelt[7] = new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("Prøv-Lykken");
@@ -51,8 +50,7 @@ public class Felter {
         nyFelt[35] = new Rederi(Oversaetter.t("spilleplade.felt.scandlines3.beskrivelse"), 1200, 600, Color.white).setUnderBeskrivelse("Scandlines");
         nyFelt[36] = new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("Prøv-Lykken");
         nyFelt[37] = new Ejendom(Oversaetter.t("spilleplade.felt.frederiksgade.beskrivelse"), 7000, 3500, new Color(73, 18, 134)).setUnderBeskrivelse("kr. 7.000");
-        //nyFelt[38] = new StatsSkat(true).setUnderBeskrivelse("Statsskat");
-        nyFelt[38] = new IndkomstSkat(Oversaetter.t("spilleplade.felt.statsskat.beskrivelse")).setUnderBeskrivelse("kr. ???");
+        nyFelt[38] = new StatsSkat(true).setUnderBeskrivelse("Statsskat");
         nyFelt[39] = new Ejendom(Oversaetter.t("spilleplade.felt.raadhuspladsen.beskrivelse"), 8000, 4000, new Color(73, 18, 134)).setUnderBeskrivelse("kr. 8.000");
 
         return nyFelt;
