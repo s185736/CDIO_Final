@@ -5,6 +5,7 @@ import matador.Oversaetter;
 import java.awt.*;
 
 public class Felter {
+
     /*Herunder skal felterne tilføjes.
      * Det er kronologisk rækkefølge.
      * HUSK BLOT AT FØLGE SAMME STRUKTUR
