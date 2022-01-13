@@ -2,6 +2,7 @@ package matador.spil;
 
 import gui_main.GUI;
 import matador.*;
+import matador.spilleplade.felter.Felter;
 import matador.spiller.Spiller;
 import matador.spiller.Spillerliste;
 import matador.spilleplade.chancekort.ChanceBunke;
@@ -11,6 +12,7 @@ import matador.spilleplade.felter.Ejendom;
 import matador.spilleplade.felter.Faengsel;
 import matador.spilleplade.genstand.Terning;
 
+import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -224,6 +226,10 @@ public class Spil {
 
 
     public void spilMatadorRunde(Spiller nuvaerendeSpiller) {
+        if (nuvaerendeSpiller.getIFaengsel() == true){
+            Faengsel faengsel = new Faengsel(false);
+            faengsel.koerHandling(this);
+        }
         for (int i = 0; i < 3;){
             switch (this.gui.getUserButtonPressed(Oversaetter.t("kast.terning") + " " + nuvaerendeSpiller.getNavn() + Oversaetter.t("kast.terning1"), "Kast")) {
             }
@@ -240,10 +246,12 @@ public class Spil {
             if (faceValue1 == faceValue2){
                 i++;
                 gui.showMessage("Du har slået 2 ens, dermed får du en ekstra tur!");
-                if (i == 3){
+                if (i == 1){
                     //Funktioner der skal laves hvor spilleren bliver sat i fængsel
                     this.spilleplade.rykSpiller(nuvaerendeSpiller, this.getFelter()[30]);
                     gui.showMessage("Du har slået 2 ens 3 gange i streg, du ryger direkte i fængsel");
+                    nuvaerendeSpiller.setIFaengsel(true);
+                    i = 3;
                 }
             }
             else{

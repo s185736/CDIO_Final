@@ -10,7 +10,7 @@ public class Spiller {
     private LagerStash lagerStash;
     private SpillerBrik spillerBrik = SpillerBrik.BIL1;
     private int faengselsKort;
-    private int position;
+    private boolean iFaengsel;
 
     /*Dette er handlingen til at køre for spillerens næste tur.*/
     private TurHandlinger turHandling;
@@ -52,6 +52,7 @@ public class Spiller {
         this.lagerStash = new LagerStash(startBalance);
         this.spiller = new GUI_Player(this.navn, this.lagerStash.getMaengdeBeloeb());
         this.faengselsKort = 0;
+        this.iFaengsel = false;
     }
 
     /*Henter navn af dette spiller.*/
@@ -66,9 +67,12 @@ public class Spiller {
         return this.lagerStash.getMaengdeBeloeb();
     }
 
-    //Sætter position for spiller
-    public void setPosition(int position) {
-        this.position = position;
+    //Sætter True/False for om spilleren er i fængsel
+    public void setIFaengsel(boolean iFaengsel){
+        this.iFaengsel = iFaengsel;
+    }
+    public boolean getIFaengsel(){
+        return this.iFaengsel;
     }
 
     /*Tilføjer balance spiller.*/
