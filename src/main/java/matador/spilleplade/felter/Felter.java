@@ -8,7 +8,7 @@ public class Felter {
 
     /*Herunder skal felterne tilføjes.
      * Det er kronologisk rækkefølge.
-     * HUSK BLOT AT FØLGE SAMME STRUKTUR
+     * HUSK BLOT AT FØLGE SAMME STRUKTURtur
      * ÆNDRING AF FELTER FOREGÅR BÅDE I Spillerplade.java samt dansk.txt*/
     public static Felt[] getFelter(){
         Felt[] nyFelt = new Felt[40];
