@@ -97,9 +97,9 @@ spilleplade.felt.frederiksgade.underBeskrivelse:'Frederiksgade'
 spilleplade.felt.statsskat.beskrivelse:Statsskat
 spilleplade.felt.statsskat.underBeskrivelse:'Statsskat'
 
-spilleplade.felt.raadhuspladsen.beskrivelse:Rådhuspladsen
+spilleplade.felt.raa
+dhuspladsen.beskrivelse:Rådhuspladsen
 spilleplade.felt.raadhuspladsen.underBeskrivelse:'Rådhuspladsen'
-
 
 
 spilleplade.felt.burgerbaren.beskrivelse:Burgerbaren
