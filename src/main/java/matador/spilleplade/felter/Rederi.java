@@ -1,5 +1,6 @@
 package matador.spilleplade.felter;
 
+import gui_fields.GUI_Shipping;
 import gui_fields.GUI_Street;
 import matador.spil.Spil;
 import matador.spiller.Spiller;
@@ -30,16 +31,16 @@ public class Rederi extends Felt {
 
     /*{@inheritDoc}*/
     @Override
-    protected GUI_Street opretGUIFelt()
+    protected GUI_Shipping opretGUIFelt()
     {
-        return new GUI_Street();
+        return new GUI_Shipping();
     }
 
     /*{@inheritDoc}*/
     @Override
-    public GUI_Street getGUIFelt()
+    public GUI_Shipping getGUIFelt()
     {
-        return (GUI_Street) this.gui_felt;
+        return (GUI_Shipping) this.gui_felt;
     }
 
     /*Henter typen af dette Hus.*/
