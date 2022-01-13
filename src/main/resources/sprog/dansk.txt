@@ -16,6 +16,7 @@ spilleplade.felt.roedovrevej.underBeskrivelse:'Rødovrevej'
 spilleplade.felt.hvidovrevej.beskrivelse:Hvidovrevej
 spilleplade.felt.hvidovrevej.underBeskrivelse:'Hvidovrevej'
 
+spilleplade.felt.statsskat.feltnavn:IndkomstSkat
 spilleplade.felt.indkomstskat.beskrivelse:Indkomstskat
 spilleplade.felt.indkomstskat.underBeskrivelse:'Indkomstskat'
 spilleplade.felt.indkomstskat.pay1:Du betaler 4.000,- til Indkomstskat.
@@ -96,6 +97,7 @@ spilleplade.felt.scandlines3.underBeskrivelse:'Scandlines Rødby-Puttgarden'
 spilleplade.felt.frederiksgade.beskrivelse:Frederiksgade
 spilleplade.felt.frederiksgade.underBeskrivelse:'Frederiksgade'
 
+spilleplade.felt.statsskat.feltnavn:Statsskat
 spilleplade.felt.statsskat.beskrivelse:Statsskat
 spilleplade.felt.statsskat.underBeskrivelse:'Statsskat'
 spilleplade.felt.statsskat.pay1:Du betaler 2.000,- til Statsskat.
