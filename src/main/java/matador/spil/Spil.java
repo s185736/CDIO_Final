@@ -212,10 +212,13 @@ public class Spil {
         switch (this.gui.getUserButtonPressed(Oversaetter.t("kast.terning") + " " + nuvaerendeSpiller.getNavn() + Oversaetter.t("kast.terning1"), "Kast")) {
         }
         this.terning.kast();
-        int faceValue = this.terning.getFaceValue();
-        this.gui.setDie(faceValue);
-        this.gui.showMessage(new StringBuilder().append(nuvaerendeSpiller.getNavn()).append(Oversaetter.t("kast.terning2")).append(" ").append(faceValue).toString());
-        this.rykSpiller(nuvaerendeSpiller, faceValue);
+        this.terning1.kast();
+        int faceValue1 = this.terning.getFaceValue();
+        int faceValue2 = this.terning1.getFaceValue();
+        int rykDistance = faceValue1 + faceValue2;
+        this.gui.setDice(faceValue1, faceValue2);
+        this.gui.showMessage(new StringBuilder().append(nuvaerendeSpiller.getNavn()).append(Oversaetter.t("kast.terning2")).append(" ").append(rykDistance).toString());
+        this.rykSpiller(nuvaerendeSpiller, rykDistance);
         Felt felt = this.spilleplade.getSpillerFelt(nuvaerendeSpiller);
         felt.koerHandling(this);
     }
