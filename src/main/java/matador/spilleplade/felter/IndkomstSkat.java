@@ -9,7 +9,7 @@ import java.awt.Color;
 public class IndkomstSkat extends Felt {
 
     /*Herunder en konstruktør af IndkomstSkat med navn, beskrivelse og underbeskrivelse.*/
-    /*public IndkomstSkat(boolean b) {
+    public IndkomstSkat(boolean b) {
         super(
                 Oversaetter.t("spilleplade.felt.indkomstskat.feltnavn"),
                 Oversaetter.t("spilleplade.felt.indkomstskat.beskrivelse"),
@@ -18,17 +18,6 @@ public class IndkomstSkat extends Felt {
                 Color.WHITE
         );
     }
-
-     */
-    public IndkomstSkat(String feltNavn) {
-        super(feltNavn);
-        this.setBeskrivelse("");
-        this.setUnderBeskrivelse("");
-        this.setForgrundsFarve(Color.WHITE);
-        this.setBaggrundsFarve(Color.BLACK);
-    }
-
-
 
     /*{@inheritDoc}*/
     @Override
