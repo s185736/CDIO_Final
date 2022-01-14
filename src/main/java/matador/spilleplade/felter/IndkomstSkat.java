@@ -49,7 +49,7 @@ public class IndkomstSkat extends Felt {
         }
         Spiller spiller = spil.getSpiller().getNuvarendeSpiller();
         String output = "";
-        String[] valg = {"FiretusindePenge", "TiProcent"};
+        String[] valg = {"FiretusindePenge", "TiProcentAfDineVaerdier"};
         String mulighedOption = spil.getGui().getUserSelection("Hvordan vil du betale denne Indkomstskat?", valg);
 
         /**
@@ -61,8 +61,8 @@ public class IndkomstSkat extends Felt {
             spiller.tilfoejBalance(-4000);
             spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.indkomstskat.pay1"));
 
-        }/*TODO: funktion der kan trække 10% af sine værdier.*/
-        if ( mulighedOption.equals("TiProcent") ) {
+        }
+        if ( mulighedOption.equals("TiProcentAfDineVaerdier") ) {
             int temp = (int) (spiller.getBalance() * 0.10);
             spiller.tilfoejBalance(-temp);
             spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.indkomstskat.pay2"));
