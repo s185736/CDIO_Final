@@ -207,7 +207,7 @@ chance.beskrivelse.felt_eller_kort.card:Tag et nyt chancekort
 chance.beskrivelse.slik:Du har spist for meget søde sager. BETAL 200M til banken.
 chance.beskrivelse.faengsel:Du løslades uden betaling. Du må beholde dette kort indtil du vil få brug for det.
 chance.beskrivelse.strandpromenaden:Ryk frem til Strandpromenaden.
-chance.beskrivelse.foedselsdag:Hurra, det er din fødselsdag! Alle giver dig 1M. Tillykke med dagen!
+chance.beskrivelse.foedselsdag:Hurra, det er din fødselsdag! Alle giver dig 500. Tillykke med dagen!
 chance.beskrivelse.lektier:Du har lavet dine opgaver! Modtag 200M fra banken.
 chance.beskrivelse.skaterparken:Helt gratis felt. Ryk frem til Skaterparken for at lave det absolutte flotte grind! Hvis ingen ejer den, får du den uden betaling! Ellers skal du betale leje til ejeren.
 
