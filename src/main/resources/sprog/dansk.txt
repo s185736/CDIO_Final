@@ -6,10 +6,10 @@ type.hvemerhvem:Vælg venligst din Bil.
 kast.terning:Det er
 kast.terning1: 's tur. Kast med terningerne
 kast.terning2: kastede
-kast.terning3: har passeret start feltet og får 2M
+kast.terning3: har passeret start feltet og får 4000M
 
 spillerBrik.hvemerhvem: Hvilken spiller er du?
-getmoney.spiller: har nu passeret start feltet og får 2M
+getmoney.spiller: har nu passeret start feltet og får 4000M
 
 spilleplade.felt.roedovrevej.beskrivelse:Rødovrevej
 spilleplade.felt.roedovrevej.underBeskrivelse:'Rødovrevej'
