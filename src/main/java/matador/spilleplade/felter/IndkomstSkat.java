@@ -1,6 +1,5 @@
 package matador.spilleplade.felter;
 
-import gui_fields.GUI_Jail;
 import gui_fields.GUI_Tax;
 import matador.spil.Spil;
 import matador.spiller.Spiller;
@@ -64,7 +63,8 @@ public class IndkomstSkat extends Felt {
 
         }/*TODO: funktion der kan trække 10% af sine værdier.*/
         if ( mulighedOption.equals("TiProcent") ) {
-            spiller.tilfoejBalance(-4000);
+            int temp = (int) (spiller.getBalance() * 0.10);
+            spiller.tilfoejBalance(-temp);
             spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.indkomstskat.pay2"));
 
         }
