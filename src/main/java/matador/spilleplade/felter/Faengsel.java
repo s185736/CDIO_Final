@@ -71,14 +71,18 @@ public class Faengsel extends Felt {
 
         }
         if ( faengselMulighed.equals("Fængselskort") ) {
-            spiller.getFængselsKort();
+            if (spiller.getFængselsKort() >= 1) {
+            //spiller.getFængselsKort();
             spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.action"));
             spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
             spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card"));
-
             spiller.fjernFaengselsKort(1);
             spiller.setIFaengsel(false);
             spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card.num") + spiller.getFængselsKort() + Oversaetter.t("spilleplade.felt.faengsel.free.card.num2"));
+            } else {
+                spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.cardfail") + spiller.getFængselsKort());
+                koerHandling(spil);
+            }
         }
          /* if ( faengselMulighed.equals("Terningekast") ) {
                     this.terning.kast();
