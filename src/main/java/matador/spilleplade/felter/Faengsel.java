@@ -80,7 +80,7 @@ public class Faengsel extends Felt {
             spiller.setIFaengsel(false);
             spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.faengsel.free.card.num") + spiller.getFængselsKort() + Oversaetter.t("spilleplade.felt.faengsel.free.card.num2"));
         }
-           /* if ( faengselMulighed.equals("Terningekast") ) {
+         /* if ( faengselMulighed.equals("Terningekast") ) {
                     this.terning.kast();
                     int faceValue = this.terning.getFaceValue();
                     this.getGui().setDie(faceValue);
