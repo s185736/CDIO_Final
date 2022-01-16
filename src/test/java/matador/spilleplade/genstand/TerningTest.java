@@ -1,15 +1,27 @@
 package matador.spilleplade.genstand;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
-class TerningTest {
-    Terning terning = new Terning();
+public class TerningTest {
+
+    private Terning terning;
+
+    @Before
+    public void setUp() throws Exception {
+        this.terning = new Terning();
+    }
+
+    @After
+    public void rivNed() throws Exception {
+    }
 
     @Test
-    public void terningKast(){
-        //Der bliver lavet en test på 1000 kast
+    public void kast() throws Exception {
+      //Der bliver lavet en test på 1000 kast
         int antalKast = 1000;
         for(int i = 0; i < antalKast; i++) {
             //Gemmer resultatet fra metoden kast()
@@ -21,11 +33,8 @@ class TerningTest {
     }
 
     @Test
-    void getFaceValue() {
-    }
-
-    @Test
-    void getAntalSider() {
+    public void getAntalSider() throws Exception {
+        assertEquals(6, this.terning.getAntalSider());
     }
 
 }
