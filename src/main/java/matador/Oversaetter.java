@@ -1,16 +1,13 @@
 package matador;
 
-
 import java.io.*;
 import java.util.HashMap;
 
 public class Oversaetter {
 
     private static Oversaetter instance;
-
     private static String filPlacering = "/sprog/";
     private static String sprog = "dansk";
-
     private HashMap<String, String> oversaettelser;
 
     private Oversaetter() {
@@ -33,19 +30,6 @@ public class Oversaetter {
 
     public static String t(String stringKey, String[] variabler) {
         return Oversaetter.getInstance().get(stringKey, variabler);
-    }
-
-    public static Oversaetter setSprog(String sprog) {
-        if (sprog.equals(Oversaetter.sprog)) {
-            return Oversaetter.instance;
-        }
-        Oversaetter.sprog = sprog;
-        Oversaetter.instance = new Oversaetter();
-        return Oversaetter.instance;
-    }
-
-    public static String getSprog() {
-        return Oversaetter.sprog;
     }
 
     private String get(String stringKey) {
@@ -73,7 +57,7 @@ public class Oversaetter {
         return oversaettelse;
     }
 
-    private String parseValue(String string) {
+    private String parseVaerdi(String string) {
         string.replace(" \\n ", "\n");
         string.replace("\\n", "\n");
         return string;
@@ -89,7 +73,7 @@ public class Oversaetter {
                     if (!nuvaerendeLinje.equals("")) {
                         String[] keyVaerdi = nuvaerendeLinje.split(":", 2);
                         String key = keyVaerdi[0];
-                        String val = keyVaerdi.length == 1 ? "" : this.parseValue(keyVaerdi[1]);
+                        String val = keyVaerdi.length == 1 ? "" : this.parseVaerdi(keyVaerdi[1]);
                         if (this.oversaettelser.containsKey(key)) {
                         } else {
                             this.oversaettelser.put(key, val);
@@ -100,10 +84,5 @@ public class Oversaetter {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void setFilPlacering(String sti)
-    {
-        Oversaetter.filPlacering = sti;
     }
 }
