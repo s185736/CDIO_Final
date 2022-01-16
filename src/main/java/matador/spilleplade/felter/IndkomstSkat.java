@@ -19,9 +19,9 @@ public class IndkomstSkat extends Felt {
 
         this.erPaaSkatFelt = erPaaFeltet;
 
-        this.setFeltNavn(Oversaetter.t("spilleplade.felt.indkomstSkat.feltnavn"));
-        this.setBeskrivelse(Oversaetter.t("spilleplade.felt.indkomstSkat.beskrivelse"));
-        this.setUnderBeskrivelse(Oversaetter.t("spilleplade.felt.indkomstSkat.underBeskrivelse"));
+        this.setFeltNavn(Oversaetter.t("spilleplade.felt.indkomstskat.feltnavn"));
+        this.setBeskrivelse(Oversaetter.t("spilleplade.felt.indkomstskat.beskrivelse"));
+        this.setUnderBeskrivelse(Oversaetter.t("spilleplade.felt.indkomstskat.underBeskrivelse"));
 
         this.setBaggrundsFarve(Color.BLACK);
         this.setForgrundsFarve(Color.WHITE);

@@ -72,23 +72,23 @@ public class ChanceBunke {
                         Chancekort.handlingTypeFelt(Color.ORANGE)
                 ),
                 new Chancekort(
-                        Oversaetter.t("chance.beskrivelse.ryk_til_orange_green"),
+                        Oversaetter.t("chance.beskrivelse.ryk_til_orange_groen"),
                         Chancekort.handlingTypeFelt(Color.ORANGE, Color.GREEN)
                 ),
                 new Chancekort(
-                        Oversaetter.t("chance.beskrivelse.ryk_til_pink_darkblue"),
+                        Oversaetter.t("chance.beskrivelse.ryk_til_pink_blaa"),
                         Chancekort.handlingTypeFelt(Color.PINK, Color.BLUE)
                 ),
                 new Chancekort(
-                        Oversaetter.t("chance.beskrivelse.ryk_til_red"),
+                        Oversaetter.t("chance.beskrivelse.ryk_til_roed"),
                         Chancekort.handlingTypeFelt(Color.RED)
                 ),
                 new Chancekort(
-                        Oversaetter.t("chance.beskrivelse.ryk_til_lightblue_red"),
+                        Oversaetter.t("chance.beskrivelse.ryk_til_blaa_red"),
                         Chancekort.handlingTypeFelt(Color.CYAN, Color.RED)
                 ),
                 new Chancekort(
-                        Oversaetter.t("chance.beskrivelse.ryk_til_brown_yellow"),
+                        Oversaetter.t("chance.beskrivelse.ryk_til_brun_yellow"),
                         Chancekort.handlingTypeFelt(Color.GRAY, Color.YELLOW)
                 ),
                 new Chancekort(

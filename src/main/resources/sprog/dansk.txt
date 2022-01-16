@@ -4,7 +4,7 @@ velkommen3.getHvemSkalStarte:Hvem skal starte?
 type.hvemerhvem:Vælg venligst din Bil.
 
 kast.terning:Det er
-kast.terning1: 's tur. Kast med terningerne
+kast.terning1: 's tur. Kast venligst med terningerne
 kast.terning2: kastede
 kast.terning3: har passeret start feltet og får 4000M
 
@@ -12,14 +12,14 @@ spillerBrik.hvemerhvem: Hvilken spiller er du?
 getmoney.spiller: har nu passeret start feltet og får 4000M
 
 spilleplade.felt.roedovrevej.beskrivelse:Rødovrevej
-spilleplade.felt.roedovrevej.underBeskrivelse:'Rødovrevej'
+spilleplade.felt.roedovrevej.underBeskrivelse:'Skal du nu være randrusianer. Du er nu landet på feltet Rødovrevej'
 
 spilleplade.felt.hvidovrevej.beskrivelse:Hvidovrevej
-spilleplade.felt.hvidovrevej.underBeskrivelse:'Hvidovrevej'
+spilleplade.felt.hvidovrevej.underBeskrivelse:'Du er nu landet på feltet Hvidovrevej, pas på med fotovognene..'
 
 spilleplade.felt.indkomstskat.feltnavn:IndkomstSkat
 spilleplade.felt.indkomstskat.beskrivelse:Indkomstskat
-spilleplade.felt.indkomstskat.underBeskrivelse:'Indkomstskat'
+spilleplade.felt.indkomstskat.underBeskrivelse:'Hovsa, du endt galt.. Du skal nu overveje om du vil betale 4.000,- eller 10% af dine værdier.'
 spilleplade.felt.indkomstskat.pay1:Du betaler 4.000,- til Indkomstskat.
 spilleplade.felt.indkomstskat.pay2:Du betaler 10% af dine værdier til Indkomstskat.
 
@@ -106,78 +106,28 @@ spilleplade.felt.statsskat.pay1:Du betaler 2.000,- til Statsskat.
 spilleplade.felt.raadhuspladsen.beskrivelse:Rådhuspladsen
 spilleplade.felt.raadhuspladsen.underBeskrivelse:'Rådhuspladsen'
 
-
-
-spilleplade.felt.burgerbaren.beskrivelse:Burgerbaren
-spilleplade.felt.burgerbaren.underBeskrivelse:'Burgerbaren'
-
-spilleplade.felt.pizzeriaet.beskrivelse:Pizzeriaet
-spilleplade.felt.pizzeriaet.underBeskrivelse:'Pizzeriaet'
-
-spilleplade.felt.slikbutikken.beskrivelse:Slikbutikken
-spilleplade.felt.slikbutikken.underBeskrivelse:'Slikbutikken'
-
-spilleplade.felt.iskiosken.beskrivelse:Iskiosken
-spilleplade.felt.iskiosken.underBeskrivelse:'Iskiosken'
-
-spilleplade.felt.museet.beskrivelse:Museet
-spilleplade.felt.museet.underBeskrivelse:'Museet er et flot sted'
-
-spilleplade.felt.biblioteket.beskrivelse:Biblioteket
-spilleplade.felt.biblioteket.underBeskrivelse:'Biblioteket'
-
-spilleplade.felt.skaterparken.beskrivelse:Skaterparken
-spilleplade.felt.skaterparken.underBeskrivelse:'Skaterparken'
-
-spilleplade.felt.swimmingpoolen.beskrivelse:Swimmingpoolen
-spilleplade.felt.swimmingpoolen.underBeskrivelse:'Swimmingpoolen'
-
 spilleplade.felt.gratisparkering.beskrivelse:Gratis parkering
 spilleplade.felt.gratisparkering.underBeskrivelse:'Gratis parkering'
 
-spilleplade.felt.spillehallen.beskrivelse:Spillehallen
-spilleplade.felt.spillehallen.underBeskrivelse:'Spillehallen'
-
-spilleplade.felt.biografen.beskrivelse:Biografen
-spilleplade.felt.biografen.underBeskrivelse:'Biografen'
-
-spilleplade.felt.legetøjsbutikken.beskrivelse:Legetøjsbutikken
-spilleplade.felt.legetøjsbutikken.underBeskrivelse:'Legetøjsbutikken'
-
-spilleplade.felt.dyrehandlen.beskrivelse:Dyrehandlen
-spilleplade.felt.dyrehandlen.underBeskrivelse:'Dyrehandlen'
-
-spilleplade.felt.bowlinghallen.beskrivelse:Bowlinghallen
-spilleplade.felt.bowlinghallen.underBeskrivelse:'Bowlinghallen'
-
-spilleplade.felt.zoo.beskrivelse:Zoo
-spilleplade.felt.zoo.underBeskrivelse:'Zoo'
-
 spilleplade.felt.chance.beskrivelse:Chance
 spilleplade.felt.chance.underBeskrivelse:'Træk et chance kort'
-
-spilleplade.felt.vandlandet.beskrivelse:Vandlandet
-spilleplade.felt.vandlandet.underBeskrivelse:'Vandlandet'
-
-spilleplade.felt.strandpromenaden.beskrivelse:Strandpromenaden
-spilleplade.felt.strandpromenaden.underBeskrivelse:'Strandpromenaden'
 
 spilleplade.felt.start.feltnavn:Start
 spilleplade.felt.start.beskrivelse:
 spilleplade.felt.start.underBeskrivelse:
 
 spilleplade.felt.parking.beskrivelse:Gratis parkering
-spilleplade.felt.parking.underBeskrivelse:'Bare snup du dig en pause.
+spilleplade.felt.parking.underBeskrivelse:'Bare snup du dig en lur.'
 
 spilleplade.felt.faengsel.besoeg.feltnavn:Fængslet
 spilleplade.felt.faengsel.besoeg.beskrivelse:Hvis du lander her, er du kun på besøg.
 spilleplade.felt.faengsel.besoeg.underBeskrivelse:På besøg
 spilleplade.felt.faengsel.gaatil.feltnavn:Gå i fængsel
-spilleplade.felt.faengsel.gaatil.beskrivelse:Gå lige i fængsel! Du passerer ikke start feltet. Så du modtager ikke 4000M. Starten af den kommende tur skal du af med 1M eller anvende 'Du løslades uden omkostninger' chancekortet, hvis du netop har det. Kast derefter terningerne, og ryk som normalt. Du kan sagtens kunne modtage leje når du er i fængslet.
+spilleplade.felt.faengsel.gaatil.beskrivelse:Gå lige i fængsel! Du passerer ikke start feltet. Så du modtager ikke 4.000,-. Starten af den kommende tur skal du af med 1M eller anvende fængselskortet, hvis du har det. Kast derefter terningerne, og ryk som normalt. Du kan sagtens kunne modtage leje når du er i fængslet.
 spilleplade.felt.faengsel.gaatil.underBeskrivelse:Gå i fængsel
 spilleplade.felt.faengsel.action:Hovsa, du skal i fængslet. Desværre så modtager du ikke penge for at passere start.
-spilleplade.felt.faengsel.pay:Du betaler 1000M for at komme ud af fængslet, og du starter den kommende tur fra besøgsfeltet.
-spilleplade.felt.faengsel.free.card:Du er så dygigt og klog, at du anvender dit frikort for at komme ud af fængslet, og starter din kommende tur fra besøgsfeltet.
+spilleplade.felt.faengsel.pay:Du skal betale 1000M for at komme fri fra fængslet, og du starter fra 'På Besøg' feltet.
+spilleplade.felt.faengsel.free.card:Du er så klog, at du anvender dit frikort for at komme fri fra fængslet, og starter din kommende tur fra 'På Besøg' feltet.
 spilleplade.felt.faengsel.free.card.num: Du har nu
 spilleplade.felt.faengsel.free.card.num2: frikort tilbage.
 spilleplade.felt.faengsel.free.cardfail:Du prøvede sgu! Men du har ingen fængselskorte...
@@ -189,28 +139,28 @@ chance.beskrivelse.spillerBrik.BIL2:Giv dette kort til BIL2, og træk endnu et c
 chance.beskrivelse.spillerBrik.BIL5:Giv dette kort til BIL5, og træk endnu et chancekort. \n BIL5: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
 chance.beskrivelse.spillerBrik.BIL6:Giv dette kort til BIL6, og træk endnu et chancekort. \n BIL6: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
 
-chance.beskrivelse.spillerBrik.action:Vælg venligst et felt som du vil rykke til.
-chance.beskrivelse.to_start:Ryk frem til START feltet. Modtag 4000.
+chance.beskrivelse.spillerBrik.action:Vælg venligst et felt som du gerne vil blive rykket til.
+chance.beskrivelse.to_start:Ryk frem til start-feltet og du vil modtage 4.000M.
 chance.beskrivelse.move_5_fields:Ryk op til 5 felter frem.
 chance.beskrivelse.move_5_fields.question:Hvor mange felter vil du gerne rykke frem?
 chance.beskrivelse.ryk_til.action:Vælg venligstet felt som du vil rykke til.
+
 chance.beskrivelse.ryk_til_orange:Ryk frem til et orange felt. Hvis det er tilgængeligt, får du det uden betaling! Ellers skal du betale leje til ejeren.
-chance.beskrivelse.ryk_til_orange_green:Ryk frem til et orange eller grønt felt. Hvis det er tilgængeligt, får du det uden betaling! Ellers skal du betale leje til ejeren.
-chance.beskrivelse.ryk_til_lightblue:Ryk frem til et lyseblåt felt. Hvis det er tilgængeligt, får du det uden betaling! Ellers skal du betale leje til ejeren.
-chance.beskrivelse.ryk_til_pink_darkblue:Ryk frem til et pink eller mørkeblåt felt. Hvis det er tilgængeligt, får du det uden betaling! Ellers skal du betale leje til ejeren.
-chance.beskrivelse.ryk_til_red:Ryk frem til et rødt felt. Hvis det er ledigt, får du det uden betaling! Ellers skal du betale leje til ejeren.
-chance.beskrivelse.ryk_til_lightblue_red:Ryk frem til et lyseblåt eller rødt felt. Hvis det er tilgængeligt, får du det uden betaling! Ellers skal du betale leje til ejeren.
-chance.beskrivelse.ryk_til_brown_yellow:Ryk frem til et gråt eller gult felt. Hvis det er tilgængeligt, får du det uden betaling! Ellers skal du betale leje til ejeren.
-chance.beskrivelse.felt_eller_kort:Ryk et felt frem, eller tag et chancekort mere fra bunken.
-chance.beskrivelse.felt_eller_kort.question:Ryk et felt eller blot tag et nyt chancekort?
-chance.beskrivelse.felt_eller_kort.move:Ryk et felt
-chance.beskrivelse.felt_eller_kort.card:Tag et nyt chancekort
-chance.beskrivelse.slik:Du har spist for meget søde sager. BETAL 200M til banken.
-chance.beskrivelse.faengsel:Du løslades uden betaling. Du må beholde dette kort indtil du vil få brug for det.
-chance.beskrivelse.strandpromenaden:Ryk frem til Strandpromenaden.
-chance.beskrivelse.foedselsdag:Hurra, det er din fødselsdag! Alle giver dig 500. Tillykke med dagen!
-chance.beskrivelse.lektier:Du har lavet dine opgaver! Modtag 200M fra banken.
-chance.beskrivelse.skaterparken:Helt gratis felt. Ryk frem til Skaterparken for at lave det absolutte flotte grind! Hvis ingen ejer den, får du den uden betaling! Ellers skal du betale leje til ejeren.
+chance.beskrivelse.ryk_til_orange_groen:Ryk frem til et orange eller grønt felt. Hvis det er tilgængeligt, får du det uden betaling! Ellers skal du betale leje til ejeren.
+chance.beskrivelse.ryk_til_blaa:Ryk frem til et blåt felt. Hvis det er tilgængeligt, får du det uden betaling! Ellers skal du betale leje til ejeren.
+chance.beskrivelse.ryk_til_pink_blaa:Ryk frem til et pink eller blåt felt. Hvis det er tilgængeligt, får du det uden betaling! Ellers skal du betale leje til ejeren.
+chance.beskrivelse.ryk_til_roed:Ryk frem til et rødt felt. Hvis det er ledigt, får du det uden betaling! Ellers skal du betale leje til ejeren.
+chance.beskrivelse.ryk_til_blaa_red:Ryk frem til et lyseblåt eller rødt felt. Hvis det er tilgængeligt, får du det uden betaling! Ellers skal du betale leje til ejeren.
+chance.beskrivelse.ryk_til_brun_yellow:Ryk frem til et gråt eller gult felt. Hvis det er tilgængeligt, får du det uden betaling! Ellers skal du betale leje til ejeren.
+chance.beskrivelse.felt_eller_kort:Enten så kan du rykke et felt frem, eller træk igen et chancekort fra bunken.
+chance.beskrivelse.felt_eller_kort.question:Vil du rykke et felt eller tage et andet chancekort?
+chance.beskrivelse.felt_eller_kort.move:Du kan rykke et felt
+chance.beskrivelse.felt_eller_kort.card:Træk et nyt chancekort igen.
+
+chance.beskrivelse.slik:Hovsa, hvor kommer alt det slik du spiser fra? Betal nu 200M til banken.
+chance.beskrivelse.faengsel:Du er sgu da heldig, du løslades uden betaling, og endda så må beholde dette kort.
+chance.beskrivelse.foedselsdag:Tillykke, det er din fødselsdag, du vil modtage 500M af alle.
+chance.beskrivelse.lektier:Du er sgu flitting, du har lavet dine lektier, du får 200M fra banken.
 
 slut.matador.fallit: er gået fallit. Spillet vil hermed slutte.
 end.matador.showwinner:
