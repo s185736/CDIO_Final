@@ -36,5 +36,4 @@ public class SpillerTest {
         this.spiller.setType(Spiller.SpillerBrik.BIL6);
         assertEquals(Spiller.SpillerBrik.BIL6, this.spiller.getType());
     }
-
 }

@@ -79,6 +79,8 @@ public class Ejendom extends Felt {
         }
     }
 
+    //Alternativ metode for betaltLeje
+    /*
     public void betalLejeInt(Spilleplade spilleplade, Spiller spiller) {
         Ejendom[] felter = spilleplade.getFeltvedTypeFarve(this.farveType);
         for (Ejendom felt : felter) {
@@ -88,6 +90,7 @@ public class Ejendom extends Felt {
             }
         }
     }
+     */
 
     /*Metode til at bestemme hvis dette hus felt er ejet.*/
     public boolean erEjet()
