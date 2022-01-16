@@ -3,6 +3,9 @@ package matador.spiller;
 import gui_fields.GUI_Player;
 import matador.LagerStash;
 
+import java.awt.*;
+import java.util.Random;
+
 public class Spiller {
 
     private GUI_Player spiller;
@@ -33,6 +36,7 @@ public class Spiller {
     public static String[] valuesToString() {
         SpillerBrik[] spillerBriks = SpillerBrik.values();
         String[] typesString = new String[spillerBriks.length];
+
         for (int i = 0; i < spillerBriks.length; i++) {
             typesString[i] = spillerBriks[i].toString();
         }

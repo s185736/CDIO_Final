@@ -1,0 +1,6 @@
+writeName:Nummer {{ #0 }}'s navn
+
+velkommen1:Velkommen til spillet.
+play:1.
+playgame1:Test endnu en string.
+empty:
