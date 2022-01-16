@@ -1,6 +1,7 @@
 package matador.spilleplade.felter;
 
 import gui_fields.GUI_Street;
+import matador.Oversaetter;
 import matador.spil.Spil;
 import matador.spiller.Spiller;
 import matador.spilleplade.Spilleplade;
@@ -13,6 +14,8 @@ public class Ejendom extends Felt {
     private int leje; //leje for dette hus felt.
     private Spiller ejer; //ejeren af hus feltet.
     private Color farveType; //typen af feltet.
+    /*Boolean der bestemmer om skal leje eller ikke*/
+    private boolean erPaaBesoeg;
 
     /*Konstrutør af Hus med et given navn og leje. Og opretter den standarde
     * beskrivelse samt under beskrivelse.*/
@@ -111,7 +114,7 @@ public class Ejendom extends Felt {
         return this.ejer;
     }
 
-    @Override
+   /* @Override
     public void koerHandling(Spil spil) {
         Spiller spiller = spil.getSpiller().getNuvarendeSpiller();
         if (this.erEjet()) {
@@ -123,6 +126,32 @@ public class Ejendom extends Felt {
         } else {
             this.koebEjendom(spiller);
             spil.getGui().showMessage("Feltet har ingen ejer, " + spiller.getNavn() + " køber feltet for " + this.getPris() + "M.");
+        }
+    }*/
+    @Override
+    public void koerHandling(Spil spil) {
+        if (this.erPaaBesoeg) {
+            return;
+        }
+        Spiller spiller = spil.getSpiller().getNuvarendeSpiller();
+        String[] valg = {"Køb", "Nej"};
+        String faengselMulighed = spil.getGui().getUserSelection("Vil du købe ejendommen?", valg);
+
+        // if statement for drop ned menu over muligheder for at komme ud af fængsel
+        if (faengselMulighed.equals("Køb")) {
+            if (this.erEjet()) {
+                if (this.erEjetAfSpiller(spiller)) {
+                    return;
+                }
+                this.betaltLeje(spil.getSpillerplade(), spiller);
+                spil.getGui().showMessage("Feltet tilhører " + this.ejer.getNavn() + ", af denne grund tjener ejeren " + this.getLeje() + "M af " + spiller.getNavn()+".");
+            } else {
+                this.koebEjendom(spiller);
+                spil.getGui().showMessage("Feltet har ingen ejer, " + spiller.getNavn() + " køber feltet for " + this.getPris() + "M.");
+            }
+        }
+        if (faengselMulighed.equals("Nej")) {
+                spil.getGui().showMessage("Du gad ikke, at købe ejendommen...");
         }
     }
 }

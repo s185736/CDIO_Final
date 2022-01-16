@@ -120,8 +120,7 @@ public class Spil {
         while (i < antalSpillere) {
             String navn = this.gui.getUserString(Oversaetter.t("velkommen2.getSpillerNavn"));
             String type = this.gui.getUserSelection(Oversaetter.t("type.hvemerhvem"), types.toArray(new String[] {}));
-
-            //types.remove(type);
+            types.remove(type);
             Spiller spiller = new Spiller(navn, this.getStarterPakke(antalSpillere));
             spiller.setType(Spiller.SpillerBrik.konvEnum(type));
             this.gui.addPlayer(spiller.getSpiller());

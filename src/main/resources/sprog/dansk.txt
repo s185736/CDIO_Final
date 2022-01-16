@@ -180,6 +180,7 @@ spilleplade.felt.faengsel.pay:Du betaler 1000M for at komme ud af fængslet, og 
 spilleplade.felt.faengsel.free.card:Du er så dygigt og klog, at du anvender dit frikort for at komme ud af fængslet, og starter din kommende tur fra besøgsfeltet.
 spilleplade.felt.faengsel.free.card.num: Du har nu
 spilleplade.felt.faengsel.free.card.num2: frikort tilbage.
+spilleplade.felt.faengsel.free.cardfail:Du prøvede sgu! Men du har ingen fængselskorte...
 
 chance.beskrivelse.spillerBrik.BIL3:Giv dette kort til BIL3, og træk endnu et chancekort. \n BIL1: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
 chance.beskrivelse.spillerBrik.BIL4:Giv dette kort til BIL4, og træk endnu et chancekort. \n BIL2: I den kommende tur skal du drøne frem til et tilgængeligt felt og så køb det. \n Du slipper ikke fri! Idet der ikke er tilgængelige felter, så skal du købe et fra de andre spillere..
