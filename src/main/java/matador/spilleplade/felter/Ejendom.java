@@ -10,10 +10,10 @@ import java.awt.Color;
 
 public class Ejendom extends Felt {
 
-    private int pris; //pris for hus felt.
-    private int leje; //leje for dette hus felt.
+    private final int pris; //pris for hus felt.
+    private final int leje; //leje for dette hus felt.
     private Spiller ejer; //ejeren af hus feltet.
-    private Color farveType; //typen af feltet.
+    private final Color farveType; //typen af feltet.
     /*Boolean der bestemmer om skal leje eller ikke*/
     private boolean erPaaBesoeg;
 

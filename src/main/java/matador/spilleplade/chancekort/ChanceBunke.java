@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class ChanceBunke {
 
-    private Chancekort[] korte;
+    private final Chancekort[] korte;
     private int antalKortTrukket;
 
     /*Konstruktør*/
@@ -52,7 +52,7 @@ public class ChanceBunke {
 
     /*Typer af chancekorte.
     * Disse er de standarde korte i bunken.*/
-    static private Chancekort[] standardeChancekorte= new Chancekort[] {
+    static private final Chancekort[] standardeChancekorte= new Chancekort[] {
                 new Chancekort(
                         Oversaetter.t("chance.beskrivelse.to_start"),
                         (spil) -> spil.rykSpiller(spil.getSpiller().getNuvarendeSpiller(), Oversaetter.t("spilleplade.felt.start.feltnavn"))

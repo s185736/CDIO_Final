@@ -1,6 +1,5 @@
 package matador.spiller;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,9 +13,6 @@ public class SpillerTest {
         this.spiller = new Spiller("Test Navn");
     }
 
-    @After
-    public void rivNed() throws Exception {
-    }
     @Test
     public void getNavn() throws Exception {
         assertTrue(this.spiller.getNavn().equals("Test Navn"));

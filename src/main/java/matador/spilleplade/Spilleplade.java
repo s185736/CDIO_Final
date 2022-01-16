@@ -2,7 +2,6 @@ package matador.spilleplade;
 
 import gui_fields.GUI_Field;
 import matador.spiller.Spiller;
-import matador.Oversaetter;
 import matador.spilleplade.felter.*;
 import matador.spilleplade.felter.Ejendom;
 
@@ -128,18 +127,6 @@ public class Spilleplade {
         nuvaerendeFelt.fjernBil(spiller);
         feltAtRykke.setBil(spiller);
     }
-
-
-    /*Rykker spiller til et bestemt felt.*/
-    /*
-    public void rykSpillerPosition(Spiller spiller, int feltPosition) {
-        Felt nuvaerendeFelt = this.spillerFeltMap.get(spiller);
-        Felt rykTilFelt = this.spillerFeltMap.replace(spiller, getFelter()[feltPosition]);
-        nuvaerendeFelt.fjernBil(spiller);
-        rykTilFelt.setBil(spiller);
-    }
-    */
-
 
     /*Få felt som en spiller er placeret på.*/
     public Felt getSpillerFelt(Spiller spiller)

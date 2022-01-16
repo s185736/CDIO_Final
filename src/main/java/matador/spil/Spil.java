@@ -15,12 +15,12 @@ import java.util.LinkedList;
 
 public class Spil {
 
-    private GUI gui;
-    private Spilleplade spilleplade;
-    private Terning terning;
-    private Terning terning1;
-    private ChanceBunke chanceBunke;
-    private Spillerliste spillere;
+    private final GUI gui;
+    private final Spilleplade spilleplade;
+    private final Terning terning;
+    private final Terning terning1;
+    private final ChanceBunke chanceBunke;
+    private final Spillerliste spillere;
 
     /*Konstruktør*/
     public Spil() {
