@@ -1,0 +1,6 @@
+writeName:Nummer {{ #0 }}'s navn
+
+velkommen1:Velkommen til Matador spillet.
+play:1.
+playgame1:Der testes en string mere.
+tom:
