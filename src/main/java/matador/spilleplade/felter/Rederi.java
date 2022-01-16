@@ -15,6 +15,7 @@ public class Rederi extends Felt {
     private Spiller ejer; //ejeren af hus feltet.
     private Color farveType; //typen af feltet.
 
+
     /*Konstrutør af Hus med et given navn og leje. Og opretter den standarde
      * beskrivelse samt under beskrivelse.*/
     public Rederi(String feltNavn, int pris, int leje, Color farveType) {
@@ -58,13 +59,14 @@ public class Rederi extends Felt {
     /*Huslejen, lejen af dette Hus.*/
     public int getLeje()
     {
-        return this.leje;
+        return this.leje * ejer.getAntalRederier();
     }
 
     /*Køb dette Hus for en spiller...*/
     public void koebEjendom(Spiller spiller) {
         this.setEjer(spiller);
         spiller.tilfoejBalance(-this.getPris());
+        spiller.setAntalRederier(1);
     }
 
     /*Betal dette leje af Huset for en spiller.*/
