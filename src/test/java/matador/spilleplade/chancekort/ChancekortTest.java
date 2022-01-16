@@ -35,8 +35,7 @@ public class ChancekortTest {
 
 
     @Test
-    public void setUnderBeskrivelse() throws Exception
-    {
+    public void setUnderBeskrivelse() throws Exception {
         this.felt.setUnderBeskrivelse("Opdatering af Underbeskrivelsen.");
         Assert.assertTrue(this.felt.getUnderBeskrivelse().equals("Opdatering af Underbeskrivelsen."));
     }
