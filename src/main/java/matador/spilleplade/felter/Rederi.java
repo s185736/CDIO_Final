@@ -77,16 +77,6 @@ public class Rederi extends Felt {
         }
     }
 
-    public void betalLejeInt(Spilleplade spilleplade, Spiller spiller) {
-        Ejendom[] felter = spilleplade.getFeltvedTypeFarve(this.farveType);
-        for (Ejendom felt : felter) {
-            if (felt.erEjetAfSpiller(this.ejer)) {
-                spiller.tilfoejBalance(-this.getLeje());
-                this.ejer.tilfoejBalance(this.getLeje());
-            }
-        }
-    }
-
     /*Metode til at bestemme hvis dette hus felt er ejet.*/
     public boolean erEjet()
     {

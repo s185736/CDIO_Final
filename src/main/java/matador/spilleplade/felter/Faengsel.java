@@ -57,7 +57,6 @@ public class Faengsel extends Felt {
             return;
         }
         Spiller spiller = spil.getSpiller().getNuvarendeSpiller();
-        String output = "";
         String[] valg = {"Betal", "Fængselskort"};
         String faengselMulighed = spil.getGui().getUserSelection("Hvordan vil du ud af faengsel?", valg);
 
@@ -84,19 +83,5 @@ public class Faengsel extends Felt {
                 koerHandling(spil);
             }
         }
-         /* if ( faengselMulighed.equals("Terningekast") ) {
-                    this.terning.kast();
-                    int faceValue = this.terning.getFaceValue();
-                    this.getGui().setDie(faceValue);
-
-                    if (faceValue1 == faceValue2) {
-                        erPaaBesoeg = true;
-                        spil.rykSpiller(spiller, Oversaetter.t("spilleplade.felt.faengsel.besoeg.feltnavn"));
-                    }
-                    else if (faceValue1 != faceValue2){
-
-                    }
-
-                } */
     }
 }

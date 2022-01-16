@@ -114,20 +114,6 @@ public class Ejendom extends Felt {
         return this.ejer;
     }
 
-   /* @Override
-    public void koerHandling(Spil spil) {
-        Spiller spiller = spil.getSpiller().getNuvarendeSpiller();
-        if (this.erEjet()) {
-            if (this.erEjetAfSpiller(spiller)) {
-                return;
-            }
-            this.betaltLeje(spil.getSpillerplade(), spiller);
-            spil.getGui().showMessage("Feltet tilhører " + this.ejer.getNavn() + ", af denne grund tjener ejeren " + this.getLeje() + "M af " + spiller.getNavn()+".");
-        } else {
-            this.koebEjendom(spiller);
-            spil.getGui().showMessage("Feltet har ingen ejer, " + spiller.getNavn() + " køber feltet for " + this.getPris() + "M.");
-        }
-    }*/
     @Override
     public void koerHandling(Spil spil) {
         if (this.erPaaBesoeg) {

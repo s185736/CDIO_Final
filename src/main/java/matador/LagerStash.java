@@ -25,5 +25,4 @@ public class LagerStash {
     {
         return this.maengdeBeloeb;
     }
-
 }

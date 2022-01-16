@@ -145,5 +145,4 @@ public class Spiller {
     {
         return spiller.getBalance() < 0;
     }
-
 }

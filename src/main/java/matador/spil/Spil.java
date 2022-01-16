@@ -10,8 +10,6 @@ import matador.spilleplade.Spilleplade;
 import matador.spilleplade.felter.Ejendom;
 import matador.spilleplade.felter.Faengsel;
 import matador.spilleplade.genstand.Terning;
-
-import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -87,21 +85,6 @@ public class Spil {
         this.gui.showMessage(spiller.getNavn() + Oversaetter.t("kast.terning3"));
     }
 
-    /*Rykker spiller til et bestemt felt.*/
-    /*
-    public void rykSpillerPosition(Spiller spiller, int feltPosition) {
-        Felt nuvaerendeFelt = this.spilleplade.getSpillerFelt(spiller);
-        Felt rykTilFelt = this.spilleplade.getFelter()[feltPosition];
-        if (!this.spilleretPasseretStartFelt(spiller, nuvaerendeFelt)) {
-            return;
-        }
-        spiller.tilfoejBalance(4000);
-        this.gui.showMessage(spiller.getNavn() + Oversaetter.t("kast.terning3"));
-    }
-     */
-
-
-
     /*Valg af antal spillere.
     * Dette vil vise et gui-dropdown menu som giver muligheden til spillerene at vælge hvor mange de vil spille spillet.*/
     private int valgAfAntalSpillere(){
@@ -113,8 +96,6 @@ public class Spil {
     private void opretSpillere(int antalSpillere) {
         LinkedList<String> types;
         types = new LinkedList<>(Arrays.asList(Spiller.SpillerBrik.valuesToString()));
-        //ArrayList<String> types;
-        //types = new ArrayList<>(Arrays.asList(Spiller.Type.valuesToString()));
 
         int i = 0;
         while (i < antalSpillere) {
@@ -254,18 +235,5 @@ public class Spil {
                 i = 3;
             }
         }
-
-        /*switch (this.gui.getUserButtonPressed(Oversaetter.t("kast.terning") + " " + nuvaerendeSpiller.getNavn() + Oversaetter.t("kast.terning1"), "Kast")) {
-        }
-        this.terning.kast();
-        this.terning1.kast();
-        int faceValue1 = this.terning.getFaceValue();
-        int faceValue2 = this.terning1.getFaceValue();
-        int rykDistance = faceValue1 + faceValue2;
-        this.gui.setDice(faceValue1, faceValue2);
-        this.gui.showMessage(new StringBuilder().append(nuvaerendeSpiller.getNavn()).append(Oversaetter.t("kast.terning2")).append(" ").append(rykDistance).toString());
-        this.rykSpiller(nuvaerendeSpiller, rykDistance);
-        Felt felt = this.spilleplade.getSpillerFelt(nuvaerendeSpiller);
-        felt.koerHandling(this);*/
     }
 }

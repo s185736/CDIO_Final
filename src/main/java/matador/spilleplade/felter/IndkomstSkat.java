@@ -48,7 +48,6 @@ public class IndkomstSkat extends Felt {
             return;
         }
         Spiller spiller = spil.getSpiller().getNuvarendeSpiller();
-        String output = "";
         String[] valg = {"FiretusindePenge", "TiProcentAfDineVaerdier"};
         String mulighedOption = spil.getGui().getUserSelection("Hvordan vil du betale denne Indkomstskat?", valg);
 
@@ -66,7 +65,6 @@ public class IndkomstSkat extends Felt {
             int temp = (int) (spiller.getBalance() * 0.10);
             spiller.tilfoejBalance(-temp);
             spil.getGui().showMessage(Oversaetter.t("spilleplade.felt.indkomstskat.pay2"));
-
         }
     }
 }

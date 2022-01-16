@@ -165,56 +165,5 @@ public class Spilleplade {
             return false;
         }
     }
-
-    /*Alle felter for dette spilleplade.*/
-    /*
-    private Felt[] opretFelter() {
-        return new Felt[] {
-                Herunder skal felterne tilføjes.
-                * Det er kronologisk rækkefølge.
-                * HUSK BLOT AT FØLGE SAMME STRUKTUR
-                * ÆNDRING AF FELTER FOREGÅR BÅDE I Spillerplade.java samt dansk.txt
-                new Start().setFeltNavn("Start") .setUnderBeskrivelse("") .setBaggrundsFarve(Color.GREEN),
-                new Ejendom(Oversaetter.t("spilleplade.felt.roedovrevej.beskrivelse"), 1, Color.BLUE).setUnderBeskrivelse("kr. 1.200"),
-                new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.hvidovrevej.beskrivelse"), 1, Color.blue).setUnderBeskrivelse("kr. 1.200"),
-                new IndkomstSkat(true).setUnderBeskrivelse("IndkomstSkat"),
-                new Rederi(true).setUnderBeskrivelse("Scandlines"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.roskildevej.beskrivelse"), 1, Color.ORANGE).setUnderBeskrivelse("kr. 2.000"),
-                new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.valbylanggade.beskrivelse"), 1, Color.ORANGE).setUnderBeskrivelse("kr. 2.000"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.allegade.beskrivelse"), 1, Color.ORANGE).setUnderBeskrivelse("kr. 2.400"),
-                new Faengsel(true).setUnderBeskrivelse("På besøg"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.frederiksbergalle.beskrivelse"), 1, Color.yellow).setUnderBeskrivelse("kr. 2.800"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.tuborgsquash.beskrivelse"), 1, Color.red).setUnderBeskrivelse("kr. 3.000"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.bulowsvej.beskrivelse"), 1, Color.yellow).setUnderBeskrivelse("kr. 2.800"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.glkongevej.beskrivelse"), 1, Color.yellow).setUnderBeskrivelse("kr. 3.200"),
-                new Rederi(true).setUnderBeskrivelse("Scandlines"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.bernstorffsvej.beskrivelse"), 1, Color.GRAY).setUnderBeskrivelse("kr. 3.600"),
-                new Chancekort().setFeltNavn("Chance").setUnderBeskrivelse("?"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.hellerupsvej.beskrivelse"), 1, Color.GRAY).setUnderBeskrivelse("kr. 3.600"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.strandvejen.beskrivelse"), 1, Color.GRAY).setUnderBeskrivelse("kr. 4.000"),
-                new Parkering().setFeltNavn("Parkering").setUnderBeskrivelse("P"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.trianglen.beskrivelse"), 1, Color.RED).setUnderBeskrivelse("kr. 4.400"),
-                new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.osterbrogade.beskrivelse"), 1, Color.RED).setUnderBeskrivelse("kr. 4.400"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.gronningen.beskrivelse"), 1, Color.RED).setUnderBeskrivelse("kr. 4.800"),
-                new Rederi(true).setUnderBeskrivelse("Scandlines"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.bredgade.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("kr. 5.200"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.kgsnytorv.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("kr. 5.200"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.cocacola.beskrivelse"), 1, Color.red).setUnderBeskrivelse("kr. 3.000"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.ostergade.beskrivelse"), 1, Color.WHITE).setUnderBeskrivelse("kr. 5.600"),
-                new Faengsel(false).setUnderBeskrivelse("Fængsel"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.amagertorv.beskrivelse"), 1, Color.YELLOW).setUnderBeskrivelse("kr. 6.000"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.vimmelskaftet.beskrivelse"), 1, Color.YELLOW).setUnderBeskrivelse("kr. 6.000"),
-                new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.nygade.beskrivelse"), 1, Color.YELLOW).setUnderBeskrivelse("kr. 6.400"),
-                new Rederi(true).setUnderBeskrivelse("Scandlines"),
-                new Chancekort().setFeltNavn("Prøv-Lykken").setUnderBeskrivelse("?"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.frederiksgade.beskrivelse"), 1, new Color(73, 18, 134)).setUnderBeskrivelse("kr. 7.000"),
-                new StatsSkat(true).setUnderBeskrivelse("Statsskat"),
-                new Ejendom(Oversaetter.t("spilleplade.felt.raadhuspladsen.beskrivelse"), 1, new Color(73, 18, 134)).setUnderBeskrivelse("kr. 8.000"),
-        };
-    }*/
 }
 
