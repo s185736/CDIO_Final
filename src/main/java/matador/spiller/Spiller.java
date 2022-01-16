@@ -11,6 +11,7 @@ public class Spiller {
     private SpillerBrik spillerBrik = SpillerBrik.BIL1;
     private int faengselsKort;
     private boolean iFaengsel;
+    private int antalRederier;
 
     /*Dette er handlingen til at køre for spillerens næste tur.*/
     private TurHandlinger turHandling;
@@ -53,6 +54,7 @@ public class Spiller {
         this.spiller = new GUI_Player(this.navn, this.lagerStash.getMaengdeBeloeb());
         this.faengselsKort = 0;
         this.iFaengsel = false;
+        this.antalRederier = 0;
     }
 
     /*Henter navn af dette spiller.*/
@@ -95,6 +97,16 @@ public class Spiller {
         this.faengselsKort -= antalFaengselsKorte;
         return this.faengselsKort;
     }
+
+    /*Henter mængde af rederier.*/
+    public int getAntalRederier() {return this.antalRederier; }
+
+    /*Tilføj mængde af rederier.*/
+    public int setAntalRederier(int antalRederier) {
+        this.antalRederier += antalRederier;
+        return this.antalRederier;
+    }
+
 
     /*Få dette spiller reference til GUI'en.*/
     public GUI_Player getSpiller()
