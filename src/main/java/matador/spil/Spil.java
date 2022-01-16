@@ -243,12 +243,11 @@ public class Spil {
             if (faceValue1 == faceValue2){
                 i++;
                 gui.showMessage("Du har slået 2 ens, dermed får du en ekstra tur!");
-                if (i == 1){
+                if (i == 3){
                     //Funktioner der skal laves hvor spilleren bliver sat i fængsel
                     this.spilleplade.rykSpiller(nuvaerendeSpiller, this.getFelter()[30]);
                     gui.showMessage("Du har slået 2 ens 3 gange i streg, du ryger direkte i fængsel");
                     nuvaerendeSpiller.setIFaengsel(true);
-                    i = 3;
                 }
             }
             else{
