@@ -16,47 +16,46 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Spil {
-
+    Timer tete = new Timer();
     private GUI gui;
     private Spilleplade spilleplade;
     private Terning terning;
     private Terning terning1;
     private ChanceBunke chanceBunke;
     private Spillerliste players;
+    private Timer timer;
     public int turn;
 
     /*Konstruktør*/
     public Spil() {
+
         this.spilleplade = new Spilleplade();
         this.gui = new GUI(this.spilleplade.getGUIFelt());
         this.terning = new Terning();
         this.terning1 = new Terning();
         this.chanceBunke = new ChanceBunke();
         this.players = new Spillerliste();
+
+
     }
 
-    public GUI getGui()
-    {
+    public GUI getGui() {
         return this.gui;
     }
 
-    public Spilleplade getBoard()
-    {
+    public Spilleplade getBoard() {
         return this.spilleplade;
     }
 
-    public Spillerliste getPlayers()
-    {
+    public Spillerliste getPlayers() {
         return this.players;
     }
 
-    public ChanceBunke getChanceDeck()
-    {
+    public ChanceBunke getChanceDeck() {
         return this.chanceBunke;
     }
 
-    public Felt[] getFelter()
-    {
+    public Felt[] getFelter() {
         return this.spilleplade.getFelter();
     }
 
@@ -71,6 +70,7 @@ public class Spil {
             return;
         }
     }
+
 
     /*Rykker spiller til et bestemt felt.*/
     public void rykSpiller(Spiller spiller, String feltNavn) {
@@ -89,10 +89,10 @@ public class Spil {
     }
 
     /*Valg af antal spillere.
-    * Dette vil vise et gui-dropdown menu som giver muligheden til spillerene at vælge hvor mange de vil spille spillet.*/
-    private int valgAfAntalSpillere(){
+     * Dette vil vise et gui-dropdown menu som giver muligheden til spillerene at vælge hvor mange de vil spille spillet.*/
+    private int valgAfAntalSpillere() {
         String valgAfAntalSpillere;
-        valgAfAntalSpillere = this.gui.getUserSelection(Oversaetter.t("velkommen1.getAntalSpillere"),"3", "4", "5", "6");
+        valgAfAntalSpillere = this.gui.getUserSelection(Oversaetter.t("velkommen1.getAntalSpillere"), "3", "4", "5", "6");
         return Integer.valueOf(valgAfAntalSpillere);
     }
 
@@ -105,7 +105,7 @@ public class Spil {
         int i = 0;
         while (i < antalSpillere) {
             String navn = this.gui.getUserString(Oversaetter.t("velkommen2.getSpillerNavn"));
-            String type = this.gui.getUserSelection(Oversaetter.t("type.hvemerhvem"), types.toArray(new String[] {}));
+            String type = this.gui.getUserSelection(Oversaetter.t("type.hvemerhvem"), types.toArray(new String[]{}));
 
             types.remove(type);
             Spiller spiller = new Spiller(navn, this.getStarterPakke(antalSpillere));
@@ -116,8 +116,7 @@ public class Spil {
             this.players.tilfoejSpiller(spiller);
             i++;
         }
-        Timer m =new Timer();
-        m.m();
+
     }
 
     /*Starter pakke til spillerne.*/
@@ -133,19 +132,23 @@ public class Spil {
     }
 
     /*Her bestemmer man hvem der skal starte.*/
-    private void hvemSkalStarte(int spillereDeltaget){
+    private void hvemSkalStarte(int spillereDeltaget) {
         String playerNumberString = "";
         switch (spillereDeltaget) {
-            case 2:  playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn());
+            case 2:
+                playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn());
                 break;
-            case 3:  playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn(), "3. " + this.players.get(2).getNavn());
+            case 3:
+                playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn(), "3. " + this.players.get(2).getNavn());
                 break;
-            case 4:  playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn(), "3. " + this.players.get(2).getNavn(), "4. " + this.players.get(3).getNavn());
+            case 4:
+                playerNumberString = this.gui.getUserSelection(Oversaetter.t("velkommen3.getHvemSkalStarte"), "1. " + this.players.get(0).getNavn(), "2. " + this.players.get(1).getNavn(), "3. " + this.players.get(2).getNavn(), "4. " + this.players.get(3).getNavn());
                 break;
         }
         playerNumberString = playerNumberString.split("\\.", 2)[0];
         int i = Integer.parseInt(playerNumberString);
         this.players.setSpillerIndex(i - 1);
+        tete.TimeTime();
     }
 
 
@@ -157,8 +160,9 @@ public class Spil {
 
 
     public void visVinderMatador() {
+
         Spiller[] vinder = this.players.getVinderMatador();
-        if (vinder.length <= 1) {
+        if ( vinder.length <= 1) {
         } else {
             for (int i = 0, winnersLength = vinder.length; i < winnersLength; i++) {
                 Spiller spiller = vinder[i];
@@ -173,21 +177,22 @@ public class Spil {
             vinder = this.players.getVinderMatador();
 
             /*Navnet af vinderen..*/
+
             if (vinder.length > 1) {
                 String[] vinderSpiller = new String[vinder.length];
                 for (int i = 0; i < vinder.length; i++) {
                     vinderSpiller[i] = vinder[i].getNavn();
                 }
-                this.gui.showMessage("Oops, der står vist lige imellen " + String.join(", ", vinderSpiller)+".");
+                this.gui.showMessage("Oops, der står vist lige imellen " + String.join(", ", vinderSpiller) + ".");
             }
         }
 
-        this.gui.showMessage("Woow, vi har en Matador Vinder: " + vinder[0].getNavn()+".");
+        this.gui.showMessage("Woow, vi har en Matador Vinder: " + vinder[0].getNavn() + ".");
     }
 
 
     /*Herunder starter spillets og spillerne oprettes og der skal bestemmes
-    * hvem skal der skal starte spillet.*/
+     * hvem skal der skal starte spillet.*/
     public void spilMatador() {
         int antalSpillere = valgAfAntalSpillere();
         this.opretSpillere(antalSpillere);
@@ -218,8 +223,6 @@ public class Spil {
     }
 
 
-
-
     public void spilMatadorRunde(Spiller nuvaerendeSpiller) {
 
         switch (this.gui.getUserButtonPressed(Oversaetter.t("kast.terning") + " " + nuvaerendeSpiller.getNavn() + Oversaetter.t("kast.terning1"), "Kast")) {
@@ -232,12 +235,6 @@ public class Spil {
         Felt felt = this.spilleplade.getPlayerField(nuvaerendeSpiller);
         felt.koerHandling(this);
     }
-
-
-
-
-
-
 
 
 }

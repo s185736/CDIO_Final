@@ -2,6 +2,7 @@ package matador;
 
 
 import matador.spil.Spil;
+import matador.spilleplade.felter.Timer;
 
 
 public class Main {
@@ -12,7 +13,6 @@ public class Main {
          start.spilMatador();**/
         new Spil().spilMatador();
 
-
-
     }
+
 }
