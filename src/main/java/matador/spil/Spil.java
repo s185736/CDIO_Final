@@ -166,10 +166,10 @@ public class Spil {
                 for (int i = 0; i < vinder.length; i++) {
                     vinderSpiller[i] = vinder[i].getNavn();
                 }
-                this.gui.showMessage("Oops, der står vist lige imellen " + String.join(", ", vinderSpiller)+".");
+                this.gui.showMessage("Oops, det står vist lige imellen " + String.join(", ", vinderSpiller)+".");
             }
         }
-        this.gui.showMessage("Woow, vi har en Matador Vinder: " + vinder[0].getNavn()+".");
+        this.gui.showMessage("Woow, vi har en Matador Vinder, som er: " + vinder[0].getNavn()+".");
     }
 
     /*Herunder starter spillets og spillerne oprettes og der skal bestemmes
