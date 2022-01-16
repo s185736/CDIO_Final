@@ -1,7 +1,6 @@
 package matador.spilleplade.felter;
 
 import gui_fields.GUI_Street;
-import matador.Oversaetter;
 import matador.spil.Spil;
 import matador.spiller.Spiller;
 import matador.spilleplade.Spilleplade;
