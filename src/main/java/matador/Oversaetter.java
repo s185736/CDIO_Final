@@ -23,6 +23,17 @@ public class Oversaetter {
             return Oversaetter.instance;
         }
     }
+    public static Oversaetter setSprog(String sprog) {
+        if (!sprog.equals(Oversaetter.sprog)){
+            Oversaetter.sprog = sprog;
+            Oversaetter.instance = new Oversaetter();
+        }
+        return Oversaetter.instance;
+    }
+
+    public static String getSprog(){
+        return Oversaetter.sprog;
+    }
 
     public static String t(String stringKey) {
         return Oversaetter.getInstance().get(stringKey);

@@ -1,8 +1,8 @@
 package matador.spiller;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
 class SpillerTest {
     //Opretter en test spiller med en konto balance på 5000 kr.
