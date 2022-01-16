@@ -202,7 +202,6 @@ public class Spil {
         System.exit(0);
     }
 
-
     public void spilMatadorRunde(Spiller nuvaerendeSpiller) {
         if (nuvaerendeSpiller.getIFaengsel() == true){
             Faengsel faengsel = new Faengsel(false);
