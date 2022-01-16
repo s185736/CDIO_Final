@@ -44,6 +44,7 @@ public class Rederi extends Felt {
     }
 
     /*Henter typen af dette Hus.*/
+    //Metode til brug for byg af huse/hotteller samt dobbelt op på leje.
     public Color getFarveType()
     {
         return this.farveType;
