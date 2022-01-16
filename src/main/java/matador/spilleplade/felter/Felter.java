@@ -23,10 +23,10 @@ public class Felter {
         nyFelt[8] = new Ejendom(Oversaetter.t("spilleplade.felt.valbylanggade.beskrivelse"), 2000, 1000, Color.ORANGE).setUnderBeskrivelse("kr. 2.000");
         nyFelt[9] = new Ejendom(Oversaetter.t("spilleplade.felt.allegade.beskrivelse"), 2400, 1200, Color.ORANGE).setUnderBeskrivelse("kr. 2.400");
         nyFelt[10] = new Faengsel(true).setUnderBeskrivelse("På besøg");
-        nyFelt[11] = new Ejendom(Oversaetter.t("spilleplade.felt.frederiksbergalle.beskrivelse"), 2800, 1400, Color.yellow).setUnderBeskrivelse("kr. 2.800");
+        nyFelt[11] = new Ejendom(Oversaetter.t("spilleplade.felt.frederiksbergalle.beskrivelse"), 2800, 1400, Color.green).setUnderBeskrivelse("kr. 2.800");
         nyFelt[12] = new Ejendom(Oversaetter.t("spilleplade.felt.tuborgsquash.beskrivelse"), 3000, 1500, Color.red).setUnderBeskrivelse("kr. 3.000");
-        nyFelt[13] = new Ejendom(Oversaetter.t("spilleplade.felt.bulowsvej.beskrivelse"), 2800, 1400, Color.yellow).setUnderBeskrivelse("kr. 2.800");
-        nyFelt[14] = new Ejendom(Oversaetter.t("spilleplade.felt.glkongevej.beskrivelse"), 3200, 1600, Color.yellow).setUnderBeskrivelse("kr. 3.200");
+        nyFelt[13] = new Ejendom(Oversaetter.t("spilleplade.felt.bulowsvej.beskrivelse"), 2800, 1400, Color.green).setUnderBeskrivelse("kr. 2.800");
+        nyFelt[14] = new Ejendom(Oversaetter.t("spilleplade.felt.glkongevej.beskrivelse"), 3200, 1600, Color.green).setUnderBeskrivelse("kr. 3.200");
         nyFelt[15] = new Rederi(Oversaetter.t("spilleplade.felt.molslinien.beskrivelse"), 1200, 600, Color.white).setUnderBeskrivelse("Mols-Linien");
         nyFelt[16] = new Ejendom(Oversaetter.t("spilleplade.felt.bernstorffsvej.beskrivelse"), 3600, 1800, Color.GRAY).setUnderBeskrivelse("kr. 3.600");
         nyFelt[17] = new Chancekort().setFeltNavn("Chance").setUnderBeskrivelse("Prøv-Lykken");
